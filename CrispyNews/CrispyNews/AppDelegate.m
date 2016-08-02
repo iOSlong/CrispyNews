@@ -37,8 +37,9 @@
     CNHomeNewsViewController *homeNewsVC = [[CNHomeNewsViewController alloc]init];
 
     CNMenuDrawerTableViewController *menuDrawerVC = [[CNMenuDrawerTableViewController alloc]init];
+    UINavigationController *homeNesNav = [[UINavigationController alloc] initWithRootViewController:homeNewsVC];
     
-    MMDrawerController *crispyMenu = [[MMDrawerController alloc]initWithCenterViewController:homeNewsVC leftDrawerViewController:menuDrawerVC];
+    MMDrawerController *crispyMenu = [[MMDrawerController alloc]initWithCenterViewController:homeNesNav leftDrawerViewController:menuDrawerVC];
     
     [crispyMenu setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
     [crispyMenu setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];

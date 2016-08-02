@@ -31,6 +31,7 @@
 		8EC883011D50BC3F0072100C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC883001D50BC3F0072100C /* AppDelegate.m */; };
 		8EC8830A1D50BEC60072100C /* NetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC883071D50BEC60072100C /* NetworkTools.m */; };
 		8EC8830B1D50BEC60072100C /* NetworkToolsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC883091D50BEC60072100C /* NetworkToolsManager.m */; };
+		8EEF64561D50CC8F00174ED5 /* CNSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF64551D50CC8F00174ED5 /* CNSegmentView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,8 @@
 		8EC883071D50BEC60072100C /* NetworkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTools.m; sourceTree = "<group>"; };
 		8EC883081D50BEC60072100C /* NetworkToolsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkToolsManager.h; sourceTree = "<group>"; };
 		8EC883091D50BEC60072100C /* NetworkToolsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkToolsManager.m; sourceTree = "<group>"; };
+		8EEF64541D50CC8F00174ED5 /* CNSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNSegmentView.h; sourceTree = "<group>"; };
+		8EEF64551D50CC8F00174ED5 /* CNSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNSegmentView.m; sourceTree = "<group>"; };
 		9F9969FE46005A83A2484DCF /* Pods-CrispyNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrispyNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrispyNews/Pods-CrispyNews.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -233,6 +236,8 @@
 		8EC882F11D50BAC90072100C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8EEF64541D50CC8F00174ED5 /* CNSegmentView.h */,
+				8EEF64551D50CC8F00174ED5 /* CNSegmentView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -427,6 +432,7 @@
 				8EC882FE1D50BBDE0072100C /* CNHomeNewsViewController.m in Sources */,
 				8EC882E61D50BA100072100C /* UIColor+XKObjcSugar.m in Sources */,
 				8EC882E51D50BA100072100C /* UIButton+XKObjcSugar.m in Sources */,
+				8EEF64561D50CC8F00174ED5 /* CNSegmentView.m in Sources */,
 				8EC882E31D50BA100072100C /* NSString+Hash.m in Sources */,
 				8EC882E91D50BA100072100C /* UILabel+XKObjcSugar.m in Sources */,
 				8EC882ED1D50BA100072100C /* UIView+XKObjcSugar.m in Sources */,
