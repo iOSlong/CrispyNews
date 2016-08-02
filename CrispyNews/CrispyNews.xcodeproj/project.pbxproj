@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23524E110CACC66390461241 /* libPods-CrispyNews.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DF59C2D921CC8BB6A4DEF42 /* libPods-CrispyNews.a */; };
+		8EC882AE1D50B88C0072100C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC882AD1D50B88C0072100C /* main.m */; };
+		8EC882B41D50B88C0072100C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC882B31D50B88C0072100C /* ViewController.m */; };
+		8EC882B71D50B88C0072100C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EC882B51D50B88C0072100C /* Main.storyboard */; };
+		8EC882B91D50B88C0072100C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EC882B81D50B88C0072100C /* Assets.xcassets */; };
+		8EC882BC1D50B88C0072100C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EC882BA1D50B88C0072100C /* LaunchScreen.storyboard */; };
+		8EC882E11D50BA100072100C /* NSBundle+XKObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC882C71D50BA100072100C /* NSBundle+XKObjcSugar.m */; };
+		8EC882E21D50BA100072100C /* NSDate+XKObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC882C91D50BA100072100C /* NSDate+XKObjcSugar.m */; };
+		8EC882E31D50BA100072100C /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC882CB1D50BA100072100C /* NSString+Hash.m */; };
+		8EC882E41D50BA100072100C /* NSString+XKObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC882CD1D50BA100072100C /* NSString+XKObjcSugar.m */; };
+		8EC882E51D50BA100072100C /* UIButton+XKObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC882CF1D50BA100072100C /* UIButton+XKObjcSugar.m */; };
+		8EC882E61D50BA100072100C /* UIColor+XKObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC882D11D50BA100072100C /* UIColor+XKObjcSugar.m */; };
+		8EC882E71D50BA100072100C /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC882D31D50BA100072100C /* UIImage+Extension.m */; };
+		8EC882E81D50BA100072100C /* UIImage+XKObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC882D51D50BA100072100C /* UIImage+XKObjcSugar.m */; };
+		8EC882E91D50BA100072100C /* UILabel+XKObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC882D71D50BA100072100C /* UILabel+XKObjcSugar.m */; };
+		8EC882EA1D50BA100072100C /* UINavigationController+XKObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC882D91D50BA100072100C /* UINavigationController+XKObjcSugar.m */; };
+		8EC882EB1D50BA100072100C /* UIScreen+XKObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC882DB1D50BA100072100C /* UIScreen+XKObjcSugar.m */; };
+		8EC882EC1D50BA100072100C /* UITextField+XKObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC882DD1D50BA100072100C /* UITextField+XKObjcSugar.m */; };
+		8EC882ED1D50BA100072100C /* UIView+XKObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC882DF1D50BA100072100C /* UIView+XKObjcSugar.m */; };
+		8EC882FB1D50BBD30072100C /* CNMenuDrawerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC882FA1D50BBD30072100C /* CNMenuDrawerTableViewController.m */; };
+		8EC882FE1D50BBDE0072100C /* CNHomeNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC882FD1D50BBDE0072100C /* CNHomeNewsViewController.m */; };
+		8EC883011D50BC3F0072100C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC883001D50BC3F0072100C /* AppDelegate.m */; };
+		8EC8830A1D50BEC60072100C /* NetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC883071D50BEC60072100C /* NetworkTools.m */; };
+		8EC8830B1D50BEC60072100C /* NetworkToolsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC883091D50BEC60072100C /* NetworkToolsManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7EFCA107DB81706114E2537E /* Pods-CrispyNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrispyNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-CrispyNews/Pods-CrispyNews.release.xcconfig"; sourceTree = "<group>"; };
+		8DF59C2D921CC8BB6A4DEF42 /* libPods-CrispyNews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CrispyNews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EC882A91D50B88C0072100C /* CrispyNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrispyNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EC882AD1D50B88C0072100C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8EC882B21D50B88C0072100C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8EC882B31D50B88C0072100C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8EC882B61D50B88C0072100C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8EC882B81D50B88C0072100C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8EC882BB1D50B88C0072100C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8EC882BD1D50B88C0072100C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EC882C61D50BA100072100C /* NSBundle+XKObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+XKObjcSugar.h"; sourceTree = "<group>"; };
+		8EC882C71D50BA100072100C /* NSBundle+XKObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+XKObjcSugar.m"; sourceTree = "<group>"; };
+		8EC882C81D50BA100072100C /* NSDate+XKObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+XKObjcSugar.h"; sourceTree = "<group>"; };
+		8EC882C91D50BA100072100C /* NSDate+XKObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+XKObjcSugar.m"; sourceTree = "<group>"; };
+		8EC882CA1D50BA100072100C /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
+		8EC882CB1D50BA100072100C /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
+		8EC882CC1D50BA100072100C /* NSString+XKObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XKObjcSugar.h"; sourceTree = "<group>"; };
+		8EC882CD1D50BA100072100C /* NSString+XKObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XKObjcSugar.m"; sourceTree = "<group>"; };
+		8EC882CE1D50BA100072100C /* UIButton+XKObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+XKObjcSugar.h"; sourceTree = "<group>"; };
+		8EC882CF1D50BA100072100C /* UIButton+XKObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+XKObjcSugar.m"; sourceTree = "<group>"; };
+		8EC882D01D50BA100072100C /* UIColor+XKObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+XKObjcSugar.h"; sourceTree = "<group>"; };
+		8EC882D11D50BA100072100C /* UIColor+XKObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+XKObjcSugar.m"; sourceTree = "<group>"; };
+		8EC882D21D50BA100072100C /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		8EC882D31D50BA100072100C /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		8EC882D41D50BA100072100C /* UIImage+XKObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XKObjcSugar.h"; sourceTree = "<group>"; };
+		8EC882D51D50BA100072100C /* UIImage+XKObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XKObjcSugar.m"; sourceTree = "<group>"; };
+		8EC882D61D50BA100072100C /* UILabel+XKObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+XKObjcSugar.h"; sourceTree = "<group>"; };
+		8EC882D71D50BA100072100C /* UILabel+XKObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+XKObjcSugar.m"; sourceTree = "<group>"; };
+		8EC882D81D50BA100072100C /* UINavigationController+XKObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+XKObjcSugar.h"; sourceTree = "<group>"; };
+		8EC882D91D50BA100072100C /* UINavigationController+XKObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+XKObjcSugar.m"; sourceTree = "<group>"; };
+		8EC882DA1D50BA100072100C /* UIScreen+XKObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+XKObjcSugar.h"; sourceTree = "<group>"; };
+		8EC882DB1D50BA100072100C /* UIScreen+XKObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+XKObjcSugar.m"; sourceTree = "<group>"; };
+		8EC882DC1D50BA100072100C /* UITextField+XKObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+XKObjcSugar.h"; sourceTree = "<group>"; };
+		8EC882DD1D50BA100072100C /* UITextField+XKObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+XKObjcSugar.m"; sourceTree = "<group>"; };
+		8EC882DE1D50BA100072100C /* UIView+XKObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XKObjcSugar.h"; sourceTree = "<group>"; };
+		8EC882DF1D50BA100072100C /* UIView+XKObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XKObjcSugar.m"; sourceTree = "<group>"; };
+		8EC882E01D50BA100072100C /* XKObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKObjcSugar.h; sourceTree = "<group>"; };
+		8EC882F91D50BBD30072100C /* CNMenuDrawerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNMenuDrawerTableViewController.h; sourceTree = "<group>"; };
+		8EC882FA1D50BBD30072100C /* CNMenuDrawerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNMenuDrawerTableViewController.m; sourceTree = "<group>"; };
+		8EC882FC1D50BBDE0072100C /* CNHomeNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNHomeNewsViewController.h; sourceTree = "<group>"; };
+		8EC882FD1D50BBDE0072100C /* CNHomeNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNHomeNewsViewController.m; sourceTree = "<group>"; };
+		8EC882FF1D50BC3F0072100C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8EC883001D50BC3F0072100C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8EC883021D50BCE00072100C /* CrispyNews__Oc___.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CrispyNews__Oc___.pch"; sourceTree = "<group>"; };
+		8EC883041D50BDF00072100C /* constantUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constantUI.h; sourceTree = "<group>"; };
+		8EC883061D50BEC60072100C /* NetworkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkTools.h; sourceTree = "<group>"; };
+		8EC883071D50BEC60072100C /* NetworkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTools.m; sourceTree = "<group>"; };
+		8EC883081D50BEC60072100C /* NetworkToolsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkToolsManager.h; sourceTree = "<group>"; };
+		8EC883091D50BEC60072100C /* NetworkToolsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkToolsManager.m; sourceTree = "<group>"; };
+		9F9969FE46005A83A2484DCF /* Pods-CrispyNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrispyNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrispyNews/Pods-CrispyNews.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8EC882A61D50B88C0072100C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23524E110CACC66390461241 /* libPods-CrispyNews.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4A493F321F05059915EA4665 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8DF59C2D921CC8BB6A4DEF42 /* libPods-CrispyNews.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8EC882A01D50B88C0072100C = {
+			isa = PBXGroup;
+			children = (
+				8EC882AB1D50B88C0072100C /* CrispyNews */,
+				8EC882AA1D50B88C0072100C /* Products */,
+				D80C78E0021AFC123E0ED305 /* Pods */,
+				4A493F321F05059915EA4665 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8EC882AA1D50B88C0072100C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8EC882A91D50B88C0072100C /* CrispyNews.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8EC882AB1D50B88C0072100C /* CrispyNews */ = {
+			isa = PBXGroup;
+			children = (
+				8EC882C31D50B95E0072100C /* Classes */,
+				8EC882B21D50B88C0072100C /* ViewController.h */,
+				8EC882B31D50B88C0072100C /* ViewController.m */,
+				8EC882FF1D50BC3F0072100C /* AppDelegate.h */,
+				8EC883001D50BC3F0072100C /* AppDelegate.m */,
+				8EC882B51D50B88C0072100C /* Main.storyboard */,
+				8EC882B81D50B88C0072100C /* Assets.xcassets */,
+				8EC882BA1D50B88C0072100C /* LaunchScreen.storyboard */,
+				8EC882BD1D50B88C0072100C /* Info.plist */,
+				8EC882AC1D50B88C0072100C /* Supporting Files */,
+			);
+			path = CrispyNews;
+			sourceTree = "<group>";
+		};
+		8EC882AC1D50B88C0072100C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8EC882AD1D50B88C0072100C /* main.m */,
+				8EC883021D50BCE00072100C /* CrispyNews__Oc___.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8EC882C31D50B95E0072100C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8EC883051D50BEC60072100C /* NetworkTools */,
+				8EC883031D50BDF00072100C /* Constant */,
+				8EC882F21D50BB280072100C /* MenuDrawer */,
+				8EC882EE1D50BA550072100C /* HomeNews */,
+				8EC882C41D50B9AD0072100C /* Category */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		8EC882C41D50B9AD0072100C /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				8EC882C51D50BA100072100C /* XKObjcSugar */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		8EC882C51D50BA100072100C /* XKObjcSugar */ = {
+			isa = PBXGroup;
+			children = (
+				8EC882C61D50BA100072100C /* NSBundle+XKObjcSugar.h */,
+				8EC882C71D50BA100072100C /* NSBundle+XKObjcSugar.m */,
+				8EC882C81D50BA100072100C /* NSDate+XKObjcSugar.h */,
+				8EC882C91D50BA100072100C /* NSDate+XKObjcSugar.m */,
+				8EC882CA1D50BA100072100C /* NSString+Hash.h */,
+				8EC882CB1D50BA100072100C /* NSString+Hash.m */,
+				8EC882CC1D50BA100072100C /* NSString+XKObjcSugar.h */,
+				8EC882CD1D50BA100072100C /* NSString+XKObjcSugar.m */,
+				8EC882CE1D50BA100072100C /* UIButton+XKObjcSugar.h */,
+				8EC882CF1D50BA100072100C /* UIButton+XKObjcSugar.m */,
+				8EC882D01D50BA100072100C /* UIColor+XKObjcSugar.h */,
+				8EC882D11D50BA100072100C /* UIColor+XKObjcSugar.m */,
+				8EC882D21D50BA100072100C /* UIImage+Extension.h */,
+				8EC882D31D50BA100072100C /* UIImage+Extension.m */,
+				8EC882D41D50BA100072100C /* UIImage+XKObjcSugar.h */,
+				8EC882D51D50BA100072100C /* UIImage+XKObjcSugar.m */,
+				8EC882D61D50BA100072100C /* UILabel+XKObjcSugar.h */,
+				8EC882D71D50BA100072100C /* UILabel+XKObjcSugar.m */,
+				8EC882D81D50BA100072100C /* UINavigationController+XKObjcSugar.h */,
+				8EC882D91D50BA100072100C /* UINavigationController+XKObjcSugar.m */,
+				8EC882DA1D50BA100072100C /* UIScreen+XKObjcSugar.h */,
+				8EC882DB1D50BA100072100C /* UIScreen+XKObjcSugar.m */,
+				8EC882DC1D50BA100072100C /* UITextField+XKObjcSugar.h */,
+				8EC882DD1D50BA100072100C /* UITextField+XKObjcSugar.m */,
+				8EC882DE1D50BA100072100C /* UIView+XKObjcSugar.h */,
+				8EC882DF1D50BA100072100C /* UIView+XKObjcSugar.m */,
+				8EC882E01D50BA100072100C /* XKObjcSugar.h */,
+			);
+			path = XKObjcSugar;
+			sourceTree = "<group>";
+		};
+		8EC882EE1D50BA550072100C /* HomeNews */ = {
+			isa = PBXGroup;
+			children = (
+				8EC882EF1D50BAC90072100C /* Controller */,
+				8EC882F01D50BAC90072100C /* Model */,
+				8EC882F11D50BAC90072100C /* Views */,
+			);
+			path = HomeNews;
+			sourceTree = "<group>";
+		};
+		8EC882EF1D50BAC90072100C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8EC882FC1D50BBDE0072100C /* CNHomeNewsViewController.h */,
+				8EC882FD1D50BBDE0072100C /* CNHomeNewsViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8EC882F01D50BAC90072100C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8EC882F11D50BAC90072100C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8EC882F21D50BB280072100C /* MenuDrawer */ = {
+			isa = PBXGroup;
+			children = (
+				8EC882F31D50BB280072100C /* Controller */,
+				8EC882F41D50BB280072100C /* Model */,
+				8EC882F51D50BB280072100C /* Views */,
+			);
+			path = MenuDrawer;
+			sourceTree = "<group>";
+		};
+		8EC882F31D50BB280072100C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8EC882F91D50BBD30072100C /* CNMenuDrawerTableViewController.h */,
+				8EC882FA1D50BBD30072100C /* CNMenuDrawerTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8EC882F41D50BB280072100C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8EC882F51D50BB280072100C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8EC883031D50BDF00072100C /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				8EC883041D50BDF00072100C /* constantUI.h */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		8EC883051D50BEC60072100C /* NetworkTools */ = {
+			isa = PBXGroup;
+			children = (
+				8EC883061D50BEC60072100C /* NetworkTools.h */,
+				8EC883071D50BEC60072100C /* NetworkTools.m */,
+				8EC883081D50BEC60072100C /* NetworkToolsManager.h */,
+				8EC883091D50BEC60072100C /* NetworkToolsManager.m */,
+			);
+			path = NetworkTools;
+			sourceTree = "<group>";
+		};
+		D80C78E0021AFC123E0ED305 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F9969FE46005A83A2484DCF /* Pods-CrispyNews.debug.xcconfig */,
+				7EFCA107DB81706114E2537E /* Pods-CrispyNews.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8EC882A81D50B88C0072100C /* CrispyNews */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8EC882C01D50B88C0072100C /* Build configuration list for PBXNativeTarget "CrispyNews" */;
+			buildPhases = (
+				DDE2865BCA832BAB79024557 /* [CP] Check Pods Manifest.lock */,
+				8EC882A51D50B88C0072100C /* Sources */,
+				8EC882A61D50B88C0072100C /* Frameworks */,
+				8EC882A71D50B88C0072100C /* Resources */,
+				010E197E6EC1589482A410F4 /* [CP] Embed Pods Frameworks */,
+				659BB73C882DCC47DFD88F5A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CrispyNews;
+			productName = CrispyNews;
+			productReference = 8EC882A91D50B88C0072100C /* CrispyNews.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8EC882A11D50B88C0072100C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = letv;
+				TargetAttributes = {
+					8EC882A81D50B88C0072100C = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 8EC882A41D50B88C0072100C /* Build configuration list for PBXProject "CrispyNews" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8EC882A01D50B88C0072100C;
+			productRefGroup = 8EC882AA1D50B88C0072100C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8EC882A81D50B88C0072100C /* CrispyNews */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8EC882A71D50B88C0072100C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EC882BC1D50B88C0072100C /* LaunchScreen.storyboard in Resources */,
+				8EC882B91D50B88C0072100C /* Assets.xcassets in Resources */,
+				8EC882B71D50B88C0072100C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		010E197E6EC1589482A410F4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CrispyNews/Pods-CrispyNews-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		659BB73C882DCC47DFD88F5A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CrispyNews/Pods-CrispyNews-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDE2865BCA832BAB79024557 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8EC882A51D50B88C0072100C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EC882EA1D50BA100072100C /* UINavigationController+XKObjcSugar.m in Sources */,
+				8EC882FB1D50BBD30072100C /* CNMenuDrawerTableViewController.m in Sources */,
+				8EC8830B1D50BEC60072100C /* NetworkToolsManager.m in Sources */,
+				8EC883011D50BC3F0072100C /* AppDelegate.m in Sources */,
+				8EC882B41D50B88C0072100C /* ViewController.m in Sources */,
+				8EC882FE1D50BBDE0072100C /* CNHomeNewsViewController.m in Sources */,
+				8EC882E61D50BA100072100C /* UIColor+XKObjcSugar.m in Sources */,
+				8EC882E51D50BA100072100C /* UIButton+XKObjcSugar.m in Sources */,
+				8EC882E31D50BA100072100C /* NSString+Hash.m in Sources */,
+				8EC882E91D50BA100072100C /* UILabel+XKObjcSugar.m in Sources */,
+				8EC882ED1D50BA100072100C /* UIView+XKObjcSugar.m in Sources */,
+				8EC882E71D50BA100072100C /* UIImage+Extension.m in Sources */,
+				8EC882E11D50BA100072100C /* NSBundle+XKObjcSugar.m in Sources */,
+				8EC882EB1D50BA100072100C /* UIScreen+XKObjcSugar.m in Sources */,
+				8EC882E81D50BA100072100C /* UIImage+XKObjcSugar.m in Sources */,
+				8EC882EC1D50BA100072100C /* UITextField+XKObjcSugar.m in Sources */,
+				8EC882E21D50BA100072100C /* NSDate+XKObjcSugar.m in Sources */,
+				8EC882AE1D50B88C0072100C /* main.m in Sources */,
+				8EC8830A1D50BEC60072100C /* NetworkTools.m in Sources */,
+				8EC882E41D50BA100072100C /* NSString+XKObjcSugar.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8EC882B51D50B88C0072100C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8EC882B61D50B88C0072100C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8EC882BA1D50B88C0072100C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8EC882BB1D50B88C0072100C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8EC882BE1D50B88C0072100C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8EC882BF1D50B88C0072100C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8EC882C11D50B88C0072100C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F9969FE46005A83A2484DCF /* Pods-CrispyNews.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CrispyNews/CrispyNews__Oc___.pch";
+				INFOPLIST_FILE = CrispyNews/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = letv.CrispyNews;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8EC882C21D50B88C0072100C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EFCA107DB81706114E2537E /* Pods-CrispyNews.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CrispyNews/CrispyNews__Oc___.pch";
+				INFOPLIST_FILE = CrispyNews/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = letv.CrispyNews;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8EC882A41D50B88C0072100C /* Build configuration list for PBXProject "CrispyNews" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EC882BE1D50B88C0072100C /* Debug */,
+				8EC882BF1D50B88C0072100C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8EC882C01D50B88C0072100C /* Build configuration list for PBXNativeTarget "CrispyNews" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EC882C11D50B88C0072100C /* Debug */,
+				8EC882C21D50B88C0072100C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8EC882A11D50B88C0072100C /* Project object */;
+}
