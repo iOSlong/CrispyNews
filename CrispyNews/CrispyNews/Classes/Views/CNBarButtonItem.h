@@ -17,6 +17,9 @@ typedef void(^BBIBlock)(CNBarButtonItem *barBItem);
 
 
 - (instancetype)barMenuButtomItem;
+- (instancetype)barButtomItem:(NSString *)title;
+
+
 
 
 - (void)barBlock:(BBIBlock )thisBlock;

@@ -8,8 +8,8 @@
 
 #import "CNHomeNewsViewController.h"
 #import "CNSegmentView.h"
-#import "CNBarButtonItem.h"
 #import "AppDelegate.h"
+#import "CNNewsThemeSetViewController.h"
 
 @interface CNHomeNewsViewController ()
 
@@ -25,7 +25,7 @@
     
     
     self.view.backgroundColor = RGBCOLOR_HEX(0xfefefe);
-    
+
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.segmentView = [[CNSegmentView alloc] initWithFrame:CGRectMake(0, 64, SCREENW, 44)];
@@ -40,7 +40,7 @@
 - (void)setNavigationBarItem {
     
     self.title = @"CrispyNews";
-    
+
     CNBarButtonItem *menuItem = [[CNBarButtonItem alloc] barMenuButtomItem];
     [menuItem barBlock:^(CNBarButtonItem *barBItem) {
         NSLog(@"menu click");
@@ -54,6 +54,23 @@
     UIBarButtonItem *leftSpaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
     leftSpaceItem.width =  iPhone6Plus? -15:-8;
     self.navigationItem.leftBarButtonItems = @[leftSpaceItem,menuItem];
+    
+    
+    CNBarButtonItem *editItem = [[CNBarButtonItem alloc] barButtomItem:@"Edit"];
+    [editItem barBlock:^(CNBarButtonItem *barBItem) {
+        NSLog(@"Edit Click");
+        CNNewsThemeSetViewController *newsThemeSetVC = [[CNNewsThemeSetViewController alloc] init];
+        [self.navigationController pushViewController:newsThemeSetVC animated:YES];
+    }];
+    UIBarButtonItem *rightSpaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    rightSpaceItem.width =  iPhone6Plus? -15:-8;
+    self.navigationItem.rightBarButtonItems = @[rightSpaceItem,editItem];
+    
+    
+    
+//    CNBarButtonItem *backItem = [[CNBarButtonItem alloc] barButtomItem:@"<"];
+//    self.navigationController.navigationItem.backBarButtonItem = backItem;
+    
 }
 
 

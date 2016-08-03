@@ -34,6 +34,12 @@
 		8EEF64561D50CC8F00174ED5 /* CNSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF64551D50CC8F00174ED5 /* CNSegmentView.m */; };
 		8EEF646C1D51C43700174ED5 /* CNBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF646B1D51C43700174ED5 /* CNBarButtonItem.m */; };
 		8EEF646F1D51CAAB00174ED5 /* CNNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF646E1D51CAAB00174ED5 /* CNNavigationController.m */; };
+		8EEF647C1D51DE5700174ED5 /* UIView+Positioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF647B1D51DE5700174ED5 /* UIView+Positioning.m */; };
+		8EEF647F1D51E0BA00174ED5 /* CNNewsThemeSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF647E1D51E0BA00174ED5 /* CNNewsThemeSetViewController.m */; };
+		8EEF648C1D51EB9600174ED5 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF648A1D51EB9600174ED5 /* DataModel.xcdatamodeld */; };
+		8EEF64911D51EC5000174ED5 /* CNTheme+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF648E1D51EC5000174ED5 /* CNTheme+CoreDataProperties.m */; };
+		8EEF64921D51EC5000174ED5 /* CNTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF64901D51EC5000174ED5 /* CNTheme.m */; };
+		8EEF64951D51ECAF00174ED5 /* CNDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF64941D51ECAF00174ED5 /* CNDataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +98,17 @@
 		8EEF646B1D51C43700174ED5 /* CNBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNBarButtonItem.m; sourceTree = "<group>"; };
 		8EEF646D1D51CAAB00174ED5 /* CNNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNNavigationController.h; sourceTree = "<group>"; };
 		8EEF646E1D51CAAB00174ED5 /* CNNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNNavigationController.m; sourceTree = "<group>"; };
+		8EEF647A1D51DE5700174ED5 /* UIView+Positioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Positioning.h"; sourceTree = "<group>"; };
+		8EEF647B1D51DE5700174ED5 /* UIView+Positioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Positioning.m"; sourceTree = "<group>"; };
+		8EEF647D1D51E0BA00174ED5 /* CNNewsThemeSetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNNewsThemeSetViewController.h; sourceTree = "<group>"; };
+		8EEF647E1D51E0BA00174ED5 /* CNNewsThemeSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNNewsThemeSetViewController.m; sourceTree = "<group>"; };
+		8EEF648B1D51EB9600174ED5 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		8EEF648D1D51EC5000174ED5 /* CNTheme+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CNTheme+CoreDataProperties.h"; sourceTree = "<group>"; };
+		8EEF648E1D51EC5000174ED5 /* CNTheme+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CNTheme+CoreDataProperties.m"; sourceTree = "<group>"; };
+		8EEF648F1D51EC5000174ED5 /* CNTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNTheme.h; sourceTree = "<group>"; };
+		8EEF64901D51EC5000174ED5 /* CNTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNTheme.m; sourceTree = "<group>"; };
+		8EEF64931D51ECAF00174ED5 /* CNDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNDataManager.h; sourceTree = "<group>"; };
+		8EEF64941D51ECAF00174ED5 /* CNDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNDataManager.m; sourceTree = "<group>"; };
 		9F9969FE46005A83A2484DCF /* Pods-CrispyNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrispyNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrispyNews/Pods-CrispyNews.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -164,6 +181,7 @@
 		8EC882C31D50B95E0072100C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8EEF64891D51EB4600174ED5 /* DataTool */,
 				8EEF64691D51C3D100174ED5 /* Views */,
 				8EC883051D50BEC60072100C /* NetworkTools */,
 				8EC883031D50BDF00072100C /* Constant */,
@@ -177,6 +195,8 @@
 		8EC882C41D50B9AD0072100C /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				8EEF647A1D51DE5700174ED5 /* UIView+Positioning.h */,
+				8EEF647B1D51DE5700174ED5 /* UIView+Positioning.m */,
 				8EC882C51D50BA100072100C /* XKObjcSugar */,
 			);
 			path = Category;
@@ -231,6 +251,8 @@
 			children = (
 				8EC882FC1D50BBDE0072100C /* CNHomeNewsViewController.h */,
 				8EC882FD1D50BBDE0072100C /* CNHomeNewsViewController.m */,
+				8EEF647D1D51E0BA00174ED5 /* CNNewsThemeSetViewController.h */,
+				8EEF647E1D51E0BA00174ED5 /* CNNewsThemeSetViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -245,6 +267,7 @@
 		8EC882F11D50BAC90072100C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8EEF64801D51E7C100174ED5 /* Cell */,
 				8EEF64541D50CC8F00174ED5 /* CNSegmentView.h */,
 				8EEF64551D50CC8F00174ED5 /* CNSegmentView.m */,
 			);
@@ -310,6 +333,27 @@
 				8EEF646B1D51C43700174ED5 /* CNBarButtonItem.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8EEF64801D51E7C100174ED5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		8EEF64891D51EB4600174ED5 /* DataTool */ = {
+			isa = PBXGroup;
+			children = (
+				8EEF648A1D51EB9600174ED5 /* DataModel.xcdatamodeld */,
+				8EEF648D1D51EC5000174ED5 /* CNTheme+CoreDataProperties.h */,
+				8EEF648E1D51EC5000174ED5 /* CNTheme+CoreDataProperties.m */,
+				8EEF648F1D51EC5000174ED5 /* CNTheme.h */,
+				8EEF64901D51EC5000174ED5 /* CNTheme.m */,
+				8EEF64931D51ECAF00174ED5 /* CNDataManager.h */,
+				8EEF64941D51ECAF00174ED5 /* CNDataManager.m */,
+			);
+			path = DataTool;
 			sourceTree = "<group>";
 		};
 		D80C78E0021AFC123E0ED305 /* Pods */ = {
@@ -443,6 +487,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EEF64921D51EC5000174ED5 /* CNTheme.m in Sources */,
 				8EC882EA1D50BA100072100C /* UINavigationController+XKObjcSugar.m in Sources */,
 				8EC882FB1D50BBD30072100C /* CNMenuDrawerTableViewController.m in Sources */,
 				8EC8830B1D50BEC60072100C /* NetworkToolsManager.m in Sources */,
@@ -450,7 +495,9 @@
 				8EC882B41D50B88C0072100C /* ViewController.m in Sources */,
 				8EC882FE1D50BBDE0072100C /* CNHomeNewsViewController.m in Sources */,
 				8EC882E61D50BA100072100C /* UIColor+XKObjcSugar.m in Sources */,
+				8EEF64911D51EC5000174ED5 /* CNTheme+CoreDataProperties.m in Sources */,
 				8EC882E51D50BA100072100C /* UIButton+XKObjcSugar.m in Sources */,
+				8EEF647F1D51E0BA00174ED5 /* CNNewsThemeSetViewController.m in Sources */,
 				8EEF64561D50CC8F00174ED5 /* CNSegmentView.m in Sources */,
 				8EEF646C1D51C43700174ED5 /* CNBarButtonItem.m in Sources */,
 				8EC882E31D50BA100072100C /* NSString+Hash.m in Sources */,
@@ -465,6 +512,9 @@
 				8EC882E21D50BA100072100C /* NSDate+XKObjcSugar.m in Sources */,
 				8EC882AE1D50B88C0072100C /* main.m in Sources */,
 				8EC8830A1D50BEC60072100C /* NetworkTools.m in Sources */,
+				8EEF648C1D51EB9600174ED5 /* DataModel.xcdatamodeld in Sources */,
+				8EEF64951D51ECAF00174ED5 /* CNDataManager.m in Sources */,
+				8EEF647C1D51DE5700174ED5 /* UIView+Positioning.m in Sources */,
 				8EC882E41D50BA100072100C /* NSString+XKObjcSugar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -621,6 +671,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8EEF648A1D51EB9600174ED5 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8EEF648B1D51EB9600174ED5 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 8EEF648B1D51EB9600174ED5 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8EC882A11D50B88C0072100C /* Project object */;
 }

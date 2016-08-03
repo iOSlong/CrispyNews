@@ -32,6 +32,7 @@ typedef void(^CNSegmentBlock)(NSInteger selectedIndex);
 @property (nonatomic, strong) UIColor *colorNormal;
 @property (nonatomic, strong) UIColor *colorHighlight;
 @property (nonatomic, assign) NSInteger selectedIndex;
+@property (nonatomic, strong) UIButton *btnAdd;
 
 - (void)cn_segBlock:(CNSegmentBlock )thisBlock;
 - (void)insertItem:(NSString *)item atIndex:(NSInteger)index;
