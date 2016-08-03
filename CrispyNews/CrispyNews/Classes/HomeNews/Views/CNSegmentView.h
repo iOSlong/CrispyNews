@@ -25,7 +25,7 @@
 
 typedef void(^CNSegmentBlock)(NSInteger selectedIndex);
 
-@interface CNSegmentView : UIScrollView
+@interface CNSegmentView : UIView
 
 @property (nonatomic, strong) NSArray *arrItem;
 @property (nonatomic, strong) UIColor *colorSelected;

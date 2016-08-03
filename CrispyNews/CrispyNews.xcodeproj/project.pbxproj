@@ -32,6 +32,8 @@
 		8EC8830A1D50BEC60072100C /* NetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC883071D50BEC60072100C /* NetworkTools.m */; };
 		8EC8830B1D50BEC60072100C /* NetworkToolsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC883091D50BEC60072100C /* NetworkToolsManager.m */; };
 		8EEF64561D50CC8F00174ED5 /* CNSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF64551D50CC8F00174ED5 /* CNSegmentView.m */; };
+		8EEF646C1D51C43700174ED5 /* CNBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF646B1D51C43700174ED5 /* CNBarButtonItem.m */; };
+		8EEF646F1D51CAAB00174ED5 /* CNNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF646E1D51CAAB00174ED5 /* CNNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +88,10 @@
 		8EC883091D50BEC60072100C /* NetworkToolsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkToolsManager.m; sourceTree = "<group>"; };
 		8EEF64541D50CC8F00174ED5 /* CNSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNSegmentView.h; sourceTree = "<group>"; };
 		8EEF64551D50CC8F00174ED5 /* CNSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNSegmentView.m; sourceTree = "<group>"; };
+		8EEF646A1D51C43700174ED5 /* CNBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNBarButtonItem.h; sourceTree = "<group>"; };
+		8EEF646B1D51C43700174ED5 /* CNBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNBarButtonItem.m; sourceTree = "<group>"; };
+		8EEF646D1D51CAAB00174ED5 /* CNNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNNavigationController.h; sourceTree = "<group>"; };
+		8EEF646E1D51CAAB00174ED5 /* CNNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNNavigationController.m; sourceTree = "<group>"; };
 		9F9969FE46005A83A2484DCF /* Pods-CrispyNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrispyNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrispyNews/Pods-CrispyNews.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +141,8 @@
 				8EC882B31D50B88C0072100C /* ViewController.m */,
 				8EC882FF1D50BC3F0072100C /* AppDelegate.h */,
 				8EC883001D50BC3F0072100C /* AppDelegate.m */,
+				8EEF646D1D51CAAB00174ED5 /* CNNavigationController.h */,
+				8EEF646E1D51CAAB00174ED5 /* CNNavigationController.m */,
 				8EC882B51D50B88C0072100C /* Main.storyboard */,
 				8EC882B81D50B88C0072100C /* Assets.xcassets */,
 				8EC882BA1D50B88C0072100C /* LaunchScreen.storyboard */,
@@ -156,6 +164,7 @@
 		8EC882C31D50B95E0072100C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8EEF64691D51C3D100174ED5 /* Views */,
 				8EC883051D50BEC60072100C /* NetworkTools */,
 				8EC883031D50BDF00072100C /* Constant */,
 				8EC882F21D50BB280072100C /* MenuDrawer */,
@@ -294,6 +303,15 @@
 			path = NetworkTools;
 			sourceTree = "<group>";
 		};
+		8EEF64691D51C3D100174ED5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8EEF646A1D51C43700174ED5 /* CNBarButtonItem.h */,
+				8EEF646B1D51C43700174ED5 /* CNBarButtonItem.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		D80C78E0021AFC123E0ED305 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,6 +350,7 @@
 		8EC882A11D50B88C0072100C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CN;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = letv;
 				TargetAttributes = {
@@ -433,6 +452,7 @@
 				8EC882E61D50BA100072100C /* UIColor+XKObjcSugar.m in Sources */,
 				8EC882E51D50BA100072100C /* UIButton+XKObjcSugar.m in Sources */,
 				8EEF64561D50CC8F00174ED5 /* CNSegmentView.m in Sources */,
+				8EEF646C1D51C43700174ED5 /* CNBarButtonItem.m in Sources */,
 				8EC882E31D50BA100072100C /* NSString+Hash.m in Sources */,
 				8EC882E91D50BA100072100C /* UILabel+XKObjcSugar.m in Sources */,
 				8EC882ED1D50BA100072100C /* UIView+XKObjcSugar.m in Sources */,
@@ -440,6 +460,7 @@
 				8EC882E11D50BA100072100C /* NSBundle+XKObjcSugar.m in Sources */,
 				8EC882EB1D50BA100072100C /* UIScreen+XKObjcSugar.m in Sources */,
 				8EC882E81D50BA100072100C /* UIImage+XKObjcSugar.m in Sources */,
+				8EEF646F1D51CAAB00174ED5 /* CNNavigationController.m in Sources */,
 				8EC882EC1D50BA100072100C /* UITextField+XKObjcSugar.m in Sources */,
 				8EC882E21D50BA100072100C /* NSDate+XKObjcSugar.m in Sources */,
 				8EC882AE1D50B88C0072100C /* main.m in Sources */,

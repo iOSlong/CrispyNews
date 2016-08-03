@@ -59,6 +59,7 @@
 @interface CNSegmentView ()
 
 @property (nonatomic, strong) UIView            *layerLine;
+@property (nonatomic, strong) UIScrollView      *scrollView;
 @property (nonatomic, strong) NSMutableArray    *muArrBtn;
 @property (nonatomic, strong) NSMutableArray    *muArrRectValue;
 @property (nonatomic, strong) CNSegmentBtn      *currentBtn;
@@ -74,8 +75,15 @@
     if (self) {
         
         [self configureItmes];
-        [self addSubview:self.layerLine];
+        [self addSubview:self.scrollView];
+        [self.scrollView addSubview:self.layerLine];
         self.backgroundColor =RGBCOLOR_HEX(0xefefef);
+        self.layer.shadowOffset = CGSizeMake(0, 0);
+        self.layer.shadowRadius = 1;
+        self.layer.shadowColor  = [UIColor lightGrayColor].CGColor;
+        self.layer.shadowOpacity= 0.6;
+        self.layer.shadowPath = [UIBezierPath bezierPathWithRect:CGRectMake(0, 44, SCREENW, 2)].CGPath;
+        
     }
     return self;
 }
@@ -86,6 +94,15 @@
         _layerLine.backgroundColor = [UIColor redColor];
     }
     return _layerLine;
+}
+
+
+- (UIScrollView *)scrollView {
+    if (!_scrollView) {
+        _scrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
+        _scrollView.showsHorizontalScrollIndicator  = NO;
+    }
+    return _scrollView;
 }
 
 - (void)setArrItem:(NSArray *)arrItem {
@@ -123,7 +140,7 @@
         [btnItem addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
         [btnItem setTag:i];
         
-        [self addSubview:btnItem];
+        [self.scrollView addSubview:btnItem];
         [self.muArrBtn addObject:btnItem];
 
     }
@@ -146,7 +163,7 @@
         
         last_x = [self vanguardDisplaySegmentItems];
     }
-    [self setContentSize:CGSizeMake(last_x + k_spanOfBtn * (self.muArrBtn.count - 1), self.frame.size.height)];
+    [self.scrollView setContentSize:CGSizeMake(last_x + k_spanOfBtn * (self.muArrBtn.count - 1), self.frame.size.height)];
 }
 
 - (CGFloat )vanguardDisplaySegmentItems {
@@ -177,7 +194,7 @@
            
             [btnItem setTag:self.muArrBtn.count];
             
-            [self addSubview:btnItem];
+            [self.scrollView addSubview:btnItem];
             [self.muArrBtn addObject:btnItem];
         }
         
@@ -193,7 +210,7 @@
     [btnItem addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     [btnItem setTag:self.muArrBtn.count];
     
-    [self addSubview:btnItem];
+    [self.scrollView addSubview:btnItem];
     [self.muArrBtn insertObject:btnItem atIndex:index];
     
     for (NSInteger i = index + 1; i< self.muArrBtn.count; i ++ ) {
@@ -232,19 +249,19 @@
     
     
     CGFloat btnCenterX      = btn.center.x;
-    CGFloat contentW        = self.contentSize.width;
+    CGFloat contentW        = self.scrollView.contentSize.width;
     CGFloat halfSizeW       = self.frame.size.width * 0.3;
-    CGFloat flexSpan        = self.contentSize.width - self.frame.size.width;
-    CGFloat offsetX          = self.frame.size.width * btnCenterX / self.contentSize.width;
+    CGFloat flexSpan        = self.scrollView.contentSize.width - self.frame.size.width;
+    CGFloat offsetX          = self.frame.size.width * btnCenterX / self.scrollView.contentSize.width;
 
     
     [UIView animateWithDuration:0.5 animations:^{
         if (btnCenterX <= halfSizeW) {
-            self.contentOffset = CGPointMake(0, 0);
+            self.scrollView.contentOffset = CGPointMake(0, 0);
         }else if (contentW - btnCenterX <= halfSizeW ){
-            self.contentOffset = CGPointMake(contentW - self.frame.size.width, 0);
+            self.scrollView.contentOffset = CGPointMake(contentW - self.frame.size.width, 0);
         }else{
-            self.contentOffset = CGPointMake(btnCenterX - offsetX, 0);
+            self.scrollView.contentOffset = CGPointMake(btnCenterX - offsetX, 0);
         }
     }];
     

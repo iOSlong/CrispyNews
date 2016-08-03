@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "CNHomeNewsViewController.h"
 #import "CNMenuDrawerTableViewController.h"
-#import <MMDrawerController/MMDrawerController.h>
+#import "CNNavigationController.h"
 
 @interface AppDelegate ()
 
@@ -37,18 +37,18 @@
     CNHomeNewsViewController *homeNewsVC = [[CNHomeNewsViewController alloc]init];
 
     CNMenuDrawerTableViewController *menuDrawerVC = [[CNMenuDrawerTableViewController alloc]init];
-    UINavigationController *homeNesNav = [[UINavigationController alloc] initWithRootViewController:homeNewsVC];
+    CNNavigationController *homeNesNav = [[CNNavigationController alloc] initWithRootViewController:homeNewsVC];
     
-    MMDrawerController *crispyMenu = [[MMDrawerController alloc]initWithCenterViewController:homeNesNav leftDrawerViewController:menuDrawerVC];
+    _crispyMenu = [[MMDrawerController alloc]initWithCenterViewController:homeNesNav leftDrawerViewController:menuDrawerVC];
     
-    [crispyMenu setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
-    [crispyMenu setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
-    [crispyMenu setShouldStretchDrawer:NO];
-    [crispyMenu setShowsShadow:YES];
+    [self.crispyMenu setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+    [self.crispyMenu setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    [self.crispyMenu setShouldStretchDrawer:NO];
+    [self.crispyMenu setShowsShadow:YES];
     
     
     
-    self.window.rootViewController = crispyMenu;
+    self.window.rootViewController = self.crispyMenu;
 }
 
 
