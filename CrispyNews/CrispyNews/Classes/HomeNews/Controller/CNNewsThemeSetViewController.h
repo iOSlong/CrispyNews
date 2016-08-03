@@ -10,4 +10,6 @@
 
 @interface CNNewsThemeSetViewController : UIViewController
 
+@property (nonatomic, strong) NSMutableArray *muArrThemes;
+
 @end

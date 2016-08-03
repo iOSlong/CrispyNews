@@ -40,6 +40,8 @@
 		8EEF64911D51EC5000174ED5 /* CNTheme+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF648E1D51EC5000174ED5 /* CNTheme+CoreDataProperties.m */; };
 		8EEF64921D51EC5000174ED5 /* CNTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF64901D51EC5000174ED5 /* CNTheme.m */; };
 		8EEF64951D51ECAF00174ED5 /* CNDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF64941D51ECAF00174ED5 /* CNDataManager.m */; };
+		8EEF64971D520E6000174ED5 /* 5pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8EEF64961D520E6000174ED5 /* 5pic.jpg */; };
+		8EEF64991D520EED00174ED5 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EEF64981D520EED00174ED5 /* test.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,6 +111,8 @@
 		8EEF64901D51EC5000174ED5 /* CNTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNTheme.m; sourceTree = "<group>"; };
 		8EEF64931D51ECAF00174ED5 /* CNDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNDataManager.h; sourceTree = "<group>"; };
 		8EEF64941D51ECAF00174ED5 /* CNDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNDataManager.m; sourceTree = "<group>"; };
+		8EEF64961D520E6000174ED5 /* 5pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5pic.jpg; sourceTree = "<group>"; };
+		8EEF64981D520EED00174ED5 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 		9F9969FE46005A83A2484DCF /* Pods-CrispyNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrispyNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrispyNews/Pods-CrispyNews.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,6 +165,8 @@
 				8EEF646D1D51CAAB00174ED5 /* CNNavigationController.h */,
 				8EEF646E1D51CAAB00174ED5 /* CNNavigationController.m */,
 				8EC882B51D50B88C0072100C /* Main.storyboard */,
+				8EEF64981D520EED00174ED5 /* test.png */,
+				8EEF64961D520E6000174ED5 /* 5pic.jpg */,
 				8EC882B81D50B88C0072100C /* Assets.xcassets */,
 				8EC882BA1D50B88C0072100C /* LaunchScreen.storyboard */,
 				8EC882BD1D50B88C0072100C /* Info.plist */,
@@ -427,8 +433,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EC882BC1D50B88C0072100C /* LaunchScreen.storyboard in Resources */,
+				8EEF64991D520EED00174ED5 /* test.png in Resources */,
 				8EC882B91D50B88C0072100C /* Assets.xcassets in Resources */,
 				8EC882B71D50B88C0072100C /* Main.storyboard in Resources */,
+				8EEF64971D520E6000174ED5 /* 5pic.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
