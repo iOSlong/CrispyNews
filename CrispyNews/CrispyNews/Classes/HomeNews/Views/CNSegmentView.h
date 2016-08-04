@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 
 
+typedef NS_ENUM(NSUInteger, CNSegmentEvent) {
+    CNSegmentEventItemClick,
+    CNSegmentEventAddClick,
+};
+
 @interface CNSegmentBtn : UIButton
 
 @property (nonatomic, strong) NSValue *valueRect;
@@ -23,7 +28,7 @@
 
 //===
 
-typedef void(^CNSegmentBlock)(NSInteger selectedIndex);
+typedef void(^CNSegmentBlock)(NSInteger selectedIndex,CNSegmentEvent segEvent);
 
 @interface CNSegmentView : UIView
 
@@ -32,7 +37,6 @@ typedef void(^CNSegmentBlock)(NSInteger selectedIndex);
 @property (nonatomic, strong) UIColor *colorNormal;
 @property (nonatomic, strong) UIColor *colorHighlight;
 @property (nonatomic, assign) NSInteger selectedIndex;
-@property (nonatomic, strong) UIButton *btnAdd;
 
 - (void)cn_segBlock:(CNSegmentBlock )thisBlock;
 - (void)insertItem:(NSString *)item atIndex:(NSInteger)index;

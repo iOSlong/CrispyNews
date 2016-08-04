@@ -63,6 +63,8 @@
 @property (nonatomic, strong) NSMutableArray    *muArrBtn;
 @property (nonatomic, strong) NSMutableArray    *muArrRectValue;
 @property (nonatomic, strong) CNSegmentBtn      *currentBtn;
+@property (nonatomic, strong) UIButton          *btnAdd;
+
 @end
 
 @implementation CNSegmentView {
@@ -74,18 +76,47 @@
     self = [super initWithFrame:frame];
     if (self) {
         
-        [self configureItmes];
-        [self addSubview:self.scrollView];
-        [self.scrollView addSubview:self.layerLine];
+        
         self.backgroundColor =RGBCOLOR_HEX(0xefefef);
         self.layer.shadowOffset = CGSizeMake(0, 0);
         self.layer.shadowRadius = 1;
         self.layer.shadowColor  = [UIColor lightGrayColor].CGColor;
         self.layer.shadowOpacity= 0.6;
-        self.layer.shadowPath = [UIBezierPath bezierPathWithRect:CGRectMake(0, 44, SCREENW, 2)].CGPath;
+        self.layer.shadowPath = [UIBezierPath bezierPathWithRect:CGRectMake(0, 44, SCREENW , 2)].CGPath;
+
+        
+        [self configureItmes];
+        [self addSubview:self.scrollView];
+        self.scrollView.width   = self.width - self.height;
+        [self.scrollView addSubview:self.layerLine];
+
+        
+        [self addSubview:self.btnAdd];
+        self.btnAdd.x           = self.scrollView.width+2;
+        self.btnAdd.y           = 0;
         
     }
     return self;
+}
+
+- (UIButton *)btnAdd {
+    if (!_btnAdd) {
+        _btnAdd = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_btnAdd setSize:CGSizeMake(self.height, self.height)];
+        [_btnAdd addTarget:self action:@selector(btnAddClick:) forControlEvents:UIControlEventTouchUpInside];
+        [_btnAdd setTitle:@"+" forState:UIControlStateNormal];
+        [_btnAdd.titleLabel setFont:[UIFont systemFontOfSize:25]];
+        [_btnAdd setBackgroundColor:RGBCOLOR_HEX(0xf5f5f5)];
+        [_btnAdd setTitleColor:RGBCOLOR_HEX(0x7f7f7f) forState:UIControlStateNormal];
+        
+        _btnAdd.layer.shadowOffset = CGSizeMake(0, 0);
+        _btnAdd.layer.shadowRadius = 2.5;
+        _btnAdd.layer.shadowColor  = [UIColor lightGrayColor].CGColor;
+        _btnAdd.layer.shadowOpacity= 0.7;
+        _btnAdd.layer.shadowPath = [UIBezierPath bezierPathWithRect:CGRectMake(-2.5,0,2.5, self.height)].CGPath;
+
+    }
+    return _btnAdd;
 }
 
 - (UIView *)layerLine{
@@ -120,9 +151,9 @@
 }
 - (void)resetAllSegments {
     
-    CGFloat btn_w = (self.frame.size.width - self.arrItem.count + k_lineH) / self.arrItem.count;
+    CGFloat btn_w = (self.scrollView.width - self.arrItem.count + k_lineH) / self.arrItem.count;
     for (UIView *view in self.subviews) {
-        if ([view isKindOfClass:[UIButton class]]) {
+        if ([view isKindOfClass:[CNSegmentBtn class]]) {
             [view removeFromSuperview];
         }
     }
@@ -131,7 +162,7 @@
     
     
     
-    self.layerLine.frame = CGRectMake(0, self.frame.size.height - k_lineH, btn_w, k_lineH);
+    self.layerLine.frame = CGRectMake(0, self.scrollView.height - k_lineH, btn_w, k_lineH);
     
     
     for (int i = 0; i< self.arrItem.count; i++) {
@@ -153,17 +184,17 @@
 - (void)displaySuitItems {
     CGFloat last_x = [self vanguardDisplaySegmentItems];
     
-    if (last_x + (k_spanOfBtn * self.muArrBtn.count - 1) < self.frame.size.width) {
-        CGFloat realSegBarW = self.frame.size.width - k_spanOfBtn * (self.muArrBtn.count - 1);
+    if (last_x + (k_spanOfBtn * self.muArrBtn.count - 1) < self.scrollView.width) {
+        CGFloat realSegBarW = self.scrollView.width - k_spanOfBtn * (self.muArrBtn.count - 1);
         for (CNSegmentBtn *cnsegBtn in self.muArrBtn) {
             CGFloat realBtnW = realSegBarW * cnsegBtn.realW / last_x;
-            CGSize  realSize = CGSizeMake(realBtnW, cnsegBtn.frame.size.height);
+            CGSize  realSize = CGSizeMake(realBtnW, cnsegBtn.height);
             cnsegBtn.valueRect = [NSValue valueWithCGSize:realSize];
         }
         
         last_x = [self vanguardDisplaySegmentItems];
     }
-    [self.scrollView setContentSize:CGSizeMake(last_x + k_spanOfBtn * (self.muArrBtn.count - 1), self.frame.size.height)];
+    [self.scrollView setContentSize:CGSizeMake(last_x + k_spanOfBtn * (self.muArrBtn.count - 1), self.height)];
 }
 
 - (CGFloat )vanguardDisplaySegmentItems {
@@ -172,7 +203,7 @@
     {
         CNSegmentBtn *cnsegBtn =  self.muArrBtn[i];
         CGSize sizeBtn = [cnsegBtn.valueRect CGSizeValue];
-        cnsegBtn.frame = CGRectMake(last_x + i * k_spanOfBtn, 0, sizeBtn.width, self.frame.size.height - k_lineH);
+        cnsegBtn.frame = CGRectMake(last_x + i * k_spanOfBtn, 0, sizeBtn.width, self.height - k_lineH);
         last_x += sizeBtn.width;
     }
     return last_x;
@@ -237,11 +268,18 @@
 - (void)moveToBtn:(CNSegmentBtn *)btn {
     CGFloat span_left   = btn.realW * 0.15;
     [UIView animateWithDuration:0.3f animations:^{
-        self.layerLine.frame  = CGRectMake(btn.frame.origin.x + span_left,
-                                           btn.frame.size.height,
-                                           btn.frame.size.width - 2 * span_left,
+        self.layerLine.frame  = CGRectMake(btn.x + span_left,
+                                           btn.height,
+                                           btn.width - 2 * span_left,
                                            k_lineH);
     }];
+}
+
+- (void)btnAddClick:(UIButton *)btn {
+    NSLog(@"add Click!");
+    if (_CNSBlock) {
+        _CNSBlock(self.selectedIndex, CNSegmentEventAddClick);
+    }
 }
 
 - (void)btnClick:(CNSegmentBtn *)btn {
@@ -250,16 +288,15 @@
     
     CGFloat btnCenterX      = btn.center.x;
     CGFloat contentW        = self.scrollView.contentSize.width;
-    CGFloat halfSizeW       = self.frame.size.width * 0.3;
-    CGFloat flexSpan        = self.scrollView.contentSize.width - self.frame.size.width;
-    CGFloat offsetX          = self.frame.size.width * btnCenterX / self.scrollView.contentSize.width;
+    CGFloat halfSizeW       = self.scrollView.width * 0.3;
+    CGFloat offsetX          = self.scrollView.width * btnCenterX / self.scrollView.contentSize.width;
 
     
     [UIView animateWithDuration:0.5 animations:^{
         if (btnCenterX <= halfSizeW) {
             self.scrollView.contentOffset = CGPointMake(0, 0);
         }else if (contentW - btnCenterX <= halfSizeW ){
-            self.scrollView.contentOffset = CGPointMake(contentW - self.frame.size.width, 0);
+            self.scrollView.contentOffset = CGPointMake(contentW - self.scrollView.width, 0);
         }else{
             self.scrollView.contentOffset = CGPointMake(btnCenterX - offsetX, 0);
         }
@@ -269,7 +306,7 @@
     
     self.selectedIndex = btn.tag;
     if (_CNSBlock) {
-        _CNSBlock(btn.tag);
+        _CNSBlock(btn.tag, CNSegmentEventItemClick);
     }
     NSLog(@"%@ -- %ld ",btn.titleLabel.text, (long)btn.tag);
 }

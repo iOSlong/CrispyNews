@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CNDataManager.h"
 
 @interface CNNewsThemeSetViewController : UIViewController
 
-@property (nonatomic, strong) NSMutableArray *muArrThemes;
+@property (nonatomic, strong) NSMutableArray<CNTheme *> *muArrChannelTheme;
+@property (nonatomic, strong) NSMutableArray<CNTheme *> *muArrRecommend;
 
 @end

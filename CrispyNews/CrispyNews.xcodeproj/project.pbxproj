@@ -37,11 +37,13 @@
 		8EEF647C1D51DE5700174ED5 /* UIView+Positioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF647B1D51DE5700174ED5 /* UIView+Positioning.m */; };
 		8EEF647F1D51E0BA00174ED5 /* CNNewsThemeSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF647E1D51E0BA00174ED5 /* CNNewsThemeSetViewController.m */; };
 		8EEF648C1D51EB9600174ED5 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF648A1D51EB9600174ED5 /* DataModel.xcdatamodeld */; };
-		8EEF64911D51EC5000174ED5 /* CNTheme+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF648E1D51EC5000174ED5 /* CNTheme+CoreDataProperties.m */; };
-		8EEF64921D51EC5000174ED5 /* CNTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF64901D51EC5000174ED5 /* CNTheme.m */; };
 		8EEF64951D51ECAF00174ED5 /* CNDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF64941D51ECAF00174ED5 /* CNDataManager.m */; };
 		8EEF64971D520E6000174ED5 /* 5pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8EEF64961D520E6000174ED5 /* 5pic.jpg */; };
 		8EEF64991D520EED00174ED5 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EEF64981D520EED00174ED5 /* test.png */; };
+		8EEF649C1D52DA4300174ED5 /* CNThemeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF649B1D52DA4300174ED5 /* CNThemeCollectionViewCell.m */; };
+		8EEF649F1D52DAAE00174ED5 /* CNThemeCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF649E1D52DAAE00174ED5 /* CNThemeCollectionReusableView.m */; };
+		8EEF64A41D5325FC00174ED5 /* CNTheme+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF64A11D5325FC00174ED5 /* CNTheme+CoreDataProperties.m */; };
+		8EEF64A51D5325FC00174ED5 /* CNTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF64A31D5325FC00174ED5 /* CNTheme.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,14 +107,18 @@
 		8EEF647D1D51E0BA00174ED5 /* CNNewsThemeSetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNNewsThemeSetViewController.h; sourceTree = "<group>"; };
 		8EEF647E1D51E0BA00174ED5 /* CNNewsThemeSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNNewsThemeSetViewController.m; sourceTree = "<group>"; };
 		8EEF648B1D51EB9600174ED5 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
-		8EEF648D1D51EC5000174ED5 /* CNTheme+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CNTheme+CoreDataProperties.h"; sourceTree = "<group>"; };
-		8EEF648E1D51EC5000174ED5 /* CNTheme+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CNTheme+CoreDataProperties.m"; sourceTree = "<group>"; };
-		8EEF648F1D51EC5000174ED5 /* CNTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNTheme.h; sourceTree = "<group>"; };
-		8EEF64901D51EC5000174ED5 /* CNTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNTheme.m; sourceTree = "<group>"; };
 		8EEF64931D51ECAF00174ED5 /* CNDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNDataManager.h; sourceTree = "<group>"; };
 		8EEF64941D51ECAF00174ED5 /* CNDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNDataManager.m; sourceTree = "<group>"; };
 		8EEF64961D520E6000174ED5 /* 5pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5pic.jpg; sourceTree = "<group>"; };
 		8EEF64981D520EED00174ED5 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
+		8EEF649A1D52DA4300174ED5 /* CNThemeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNThemeCollectionViewCell.h; sourceTree = "<group>"; };
+		8EEF649B1D52DA4300174ED5 /* CNThemeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNThemeCollectionViewCell.m; sourceTree = "<group>"; };
+		8EEF649D1D52DAAE00174ED5 /* CNThemeCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNThemeCollectionReusableView.h; sourceTree = "<group>"; };
+		8EEF649E1D52DAAE00174ED5 /* CNThemeCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNThemeCollectionReusableView.m; sourceTree = "<group>"; };
+		8EEF64A01D5325FC00174ED5 /* CNTheme+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CNTheme+CoreDataProperties.h"; sourceTree = "<group>"; };
+		8EEF64A11D5325FC00174ED5 /* CNTheme+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CNTheme+CoreDataProperties.m"; sourceTree = "<group>"; };
+		8EEF64A21D5325FC00174ED5 /* CNTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNTheme.h; sourceTree = "<group>"; };
+		8EEF64A31D5325FC00174ED5 /* CNTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNTheme.m; sourceTree = "<group>"; };
 		9F9969FE46005A83A2484DCF /* Pods-CrispyNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrispyNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrispyNews/Pods-CrispyNews.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -344,6 +350,10 @@
 		8EEF64801D51E7C100174ED5 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				8EEF649A1D52DA4300174ED5 /* CNThemeCollectionViewCell.h */,
+				8EEF649B1D52DA4300174ED5 /* CNThemeCollectionViewCell.m */,
+				8EEF649D1D52DAAE00174ED5 /* CNThemeCollectionReusableView.h */,
+				8EEF649E1D52DAAE00174ED5 /* CNThemeCollectionReusableView.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -352,10 +362,10 @@
 			isa = PBXGroup;
 			children = (
 				8EEF648A1D51EB9600174ED5 /* DataModel.xcdatamodeld */,
-				8EEF648D1D51EC5000174ED5 /* CNTheme+CoreDataProperties.h */,
-				8EEF648E1D51EC5000174ED5 /* CNTheme+CoreDataProperties.m */,
-				8EEF648F1D51EC5000174ED5 /* CNTheme.h */,
-				8EEF64901D51EC5000174ED5 /* CNTheme.m */,
+				8EEF64A01D5325FC00174ED5 /* CNTheme+CoreDataProperties.h */,
+				8EEF64A11D5325FC00174ED5 /* CNTheme+CoreDataProperties.m */,
+				8EEF64A21D5325FC00174ED5 /* CNTheme.h */,
+				8EEF64A31D5325FC00174ED5 /* CNTheme.m */,
 				8EEF64931D51ECAF00174ED5 /* CNDataManager.h */,
 				8EEF64941D51ECAF00174ED5 /* CNDataManager.m */,
 			);
@@ -495,7 +505,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EEF64921D51EC5000174ED5 /* CNTheme.m in Sources */,
 				8EC882EA1D50BA100072100C /* UINavigationController+XKObjcSugar.m in Sources */,
 				8EC882FB1D50BBD30072100C /* CNMenuDrawerTableViewController.m in Sources */,
 				8EC8830B1D50BEC60072100C /* NetworkToolsManager.m in Sources */,
@@ -503,7 +512,6 @@
 				8EC882B41D50B88C0072100C /* ViewController.m in Sources */,
 				8EC882FE1D50BBDE0072100C /* CNHomeNewsViewController.m in Sources */,
 				8EC882E61D50BA100072100C /* UIColor+XKObjcSugar.m in Sources */,
-				8EEF64911D51EC5000174ED5 /* CNTheme+CoreDataProperties.m in Sources */,
 				8EC882E51D50BA100072100C /* UIButton+XKObjcSugar.m in Sources */,
 				8EEF647F1D51E0BA00174ED5 /* CNNewsThemeSetViewController.m in Sources */,
 				8EEF64561D50CC8F00174ED5 /* CNSegmentView.m in Sources */,
@@ -518,12 +526,16 @@
 				8EEF646F1D51CAAB00174ED5 /* CNNavigationController.m in Sources */,
 				8EC882EC1D50BA100072100C /* UITextField+XKObjcSugar.m in Sources */,
 				8EC882E21D50BA100072100C /* NSDate+XKObjcSugar.m in Sources */,
+				8EEF649F1D52DAAE00174ED5 /* CNThemeCollectionReusableView.m in Sources */,
+				8EEF64A41D5325FC00174ED5 /* CNTheme+CoreDataProperties.m in Sources */,
 				8EC882AE1D50B88C0072100C /* main.m in Sources */,
 				8EC8830A1D50BEC60072100C /* NetworkTools.m in Sources */,
 				8EEF648C1D51EB9600174ED5 /* DataModel.xcdatamodeld in Sources */,
 				8EEF64951D51ECAF00174ED5 /* CNDataManager.m in Sources */,
 				8EEF647C1D51DE5700174ED5 /* UIView+Positioning.m in Sources */,
+				8EEF64A51D5325FC00174ED5 /* CNTheme.m in Sources */,
 				8EC882E41D50BA100072100C /* NSString+XKObjcSugar.m in Sources */,
+				8EEF649C1D52DA4300174ED5 /* CNThemeCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

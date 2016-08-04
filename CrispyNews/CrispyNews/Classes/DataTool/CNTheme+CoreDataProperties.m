@@ -2,7 +2,7 @@
 //  CNTheme+CoreDataProperties.m
 //  CrispyNews
 //
-//  Created by xuewu.long on 16/8/3.
+//  Created by xuewu.long on 16/8/4.
 //  Copyright © 2016年 letv. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -15,5 +15,6 @@
 
 @dynamic themeName;
 @dynamic themeId;
+@dynamic themeChannel;
 
 @end

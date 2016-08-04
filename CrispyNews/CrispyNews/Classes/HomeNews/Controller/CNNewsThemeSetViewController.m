@@ -7,14 +7,31 @@
 //
 
 #import "CNNewsThemeSetViewController.h"
+#import "CNThemeCollectionViewCell.h"
+#import "CNThemeCollectionReusableView.h"
 
-@interface CNNewsThemeSetViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
+@interface CNNewsThemeSetViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
+@property (nonatomic, assign) BOOL isCellShouldShake;
+//@property (nonatomic, strong) NSMutableArray *muArrRecommended;
 
 @end
 
 @implementation CNNewsThemeSetViewController
+
+static NSString *const cellId = @"cellId";
+static NSString *const headerId = @"headerId";
+static NSString *const footerId = @"footerId";
+
+//- (NSMutableArray *)muArrRecommended {
+//    if (!_muArrRecommended) {
+//        NSArray *muArr = @[@"banana",@"apple",@"pease",@"unbremna",@"peak",@"tortate",@"new money",@"helloMan",@"spider",@"pig",@"dog",@"elephant",@"lion",@"big cat",@"showman",@"superPob",@"healer"];
+//        _muArrRecommended = [NSMutableArray arrayWithArray:muArr];
+//    }
+//    return _muArrRecommended;
+//}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -55,10 +72,13 @@
     //设置布局滚动方向为 Horizontal-水平滚动   Vertical-垂直滚动
     //注意：如果是Vertical的则cell是水平布局排列，如果是Horizontal则cell是垂直布局排列 （这个就叫做流式布局）
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;
+    
+    layout.headerReferenceSize = CGSizeMake([UIScreen mainScreen].bounds.size.width, 35);//头部
     //设置每一个item的大小
-    layout.itemSize     = CGSizeMake(150, 180);
+    layout.itemSize     = CGSizeMake(85, 38);
     //设置分区的EdgeInset
-    layout.sectionInset = UIEdgeInsetsMake(20, 20, 20, 20);
+    layout.sectionInset = UIEdgeInsetsMake(15, 15, 15, 15);
+
     
     
     //创建一个collectionView，通过布局策略来创建
@@ -71,7 +91,10 @@
     self.collectionView.allowsMultipleSelection = YES;
 
     //注册item类型，这里使用系统的cell类型(注意：collectionView在完成代理之前必须要注册一个cell)
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cellId"];
+    [self.collectionView registerClass:[CNThemeCollectionViewCell class] forCellWithReuseIdentifier:cellId];
+    [self.collectionView registerClass:[CNThemeCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerId];
+    [self.collectionView registerClass:[CNThemeCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:footerId];
+    
     
     [self.view addSubview:self.collectionView];
 }
@@ -80,10 +103,34 @@
 #pragma mark CollectionView 的代理方法
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     //注意，collectionView只有一种实现cell回调的方法，就是只能从复用池中返回cell而不能返回新建的cell
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellId" forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1];
-    return cell;
+    CNThemeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellId forIndexPath:indexPath];
     
+    [cell stopShake];
+    if (indexPath.section == 0 && self.isCellShouldShake) {
+        [cell startShake];
+    }
+    
+    if (indexPath.section == 1){
+        cell.themeBtn.themeTitle = self.muArrRecommend[indexPath.row].themeName;
+    }else if (indexPath.section == 0){
+        cell.themeBtn.themeTitle = self.muArrChannelTheme[indexPath.row].themeName;
+    }
+    
+    [cell themeCellBlock:^(CNThemeEvent themeEvent) {
+        if (indexPath.section == 1 && themeEvent == CNThemeEventItemClick)
+        {
+            [self.muArrChannelTheme addObject:self.muArrRecommend[indexPath.row]];
+            [self.muArrRecommend removeObjectAtIndex:indexPath.row];
+        }
+        else if (indexPath.section == 0 && themeEvent == CNThemeEventDelete)
+        {
+            [self.muArrRecommend addObject:self.muArrChannelTheme[indexPath.row]];
+            [self.muArrChannelTheme removeObjectAtIndex:indexPath.row];
+        }
+        [collectionView reloadData];
+    }];
+    
+    return cell;
     
     //使用下面的方法会导致崩溃
 #if 0
@@ -94,28 +141,96 @@
 }
 //返回分区的条数
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    return 3;
+    return 2;
 }
 //返回每一个分区的item数目
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 3;
+    if (section == 0) {
+        return self.muArrChannelTheme.count;
+    }else if (section == 1){
+        return self.muArrRecommend.count;
+    }
+    return 0;
 }
 
 //设置每一个cell的大小
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row %2== 0) {
-        return CGSizeMake(100, 100);
-    }else{
-        return CGSizeMake(50, 50);
+    
+    return CGSizeMake(85, 38);
+   
+}
+
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    if ([kind isEqualToString:UICollectionElementKindSectionHeader])
+    {
+        CNThemeCollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:headerId forIndexPath:indexPath];
+        if (headerView == nil){
+            headerView = [CNThemeCollectionReusableView new];
+        }
+        
+        if (indexPath.section == 0) {
+            headerView.barType = CNThemeBarTypeHeaderMyChannels;
+        }else if (indexPath.section == 1){
+            headerView.barType = CNThemeBarTypeHeaderRecommended;
+        }
+        
+        [headerView themeBar:^(CNThemeBarState themeState) {
+            NSLog(@"click - >");
+            if (themeState == CNThemeBarStateEditing) {
+                self.isCellShouldShake = YES;
+            }else{
+                self.isCellShouldShake = NO;
+            }
+            [collectionView reloadData];
+            [self.collectionView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector (tapCollectionView)]];
+        }];
+        if (self.isCellShouldShake == NO) {
+            headerView.themeState = CNThemeBarStateNormal;
+        }else{
+            headerView.themeState = CNThemeBarStateEditing;
+        }
+        
+        
+        return headerView;
     }
+    else if ([kind isEqualToString:UICollectionElementKindSectionFooter])
+    {
+        CNThemeCollectionReusableView *footerView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:footerId forIndexPath:indexPath];
+        if (footerView == nil)
+        {
+            footerView = [CNThemeCollectionReusableView new];
+        }
+        footerView.barType = CNThemeBarTypeFooter;
+        return footerView;
+    }
+    return nil;
 }
 
-//-(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
-//    return [collectionView dequeueReusableSupplementaryViewOfKind:@"thiskind" withReuseIdentifier:@"suppementId" forIndexPath:indexPath];
-//}
 
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"selected indexPath = %@",indexPath);
+    self.isCellShouldShake = NO;
+    [self.collectionView reloadData];
+}
+- (void)tapCollectionView{
+    self.isCellShouldShake = NO;
+    [self.collectionView reloadData];
+    [self.collectionView removeGestureRecognizer:self.collectionView.gestureRecognizers.lastObject];
+}
+
+
+
+#pragma mark UICollectionViewDelegateFlowLayout
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
+{
+    return (CGSize){SCREENW,44};
+}
+
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section
+{
+    return (CGSize){SCREENW,2};
 }
 
 
@@ -124,14 +239,6 @@
 
 
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
