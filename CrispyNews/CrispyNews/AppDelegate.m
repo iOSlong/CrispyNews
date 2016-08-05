@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "CNHomeNewsViewController.h"
 #import "CNMenuDrawerTableViewController.h"
-#import "CNNavigationController.h"
+
 
 @interface AppDelegate ()
 
@@ -19,7 +19,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-   
+    
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
@@ -28,25 +28,31 @@
     
     [self.window makeKeyAndVisible];
     
+    
+    //    -------------------
+    //    龙
+    //    的技术解决的实际的s
+    //    ==================
+    
+    
     return YES;
 }
 
 
 - (void)defaultRootController {
-
+    
     CNHomeNewsViewController *homeNewsVC = [[CNHomeNewsViewController alloc]init];
-
+    
     CNMenuDrawerTableViewController *menuDrawerVC = [[CNMenuDrawerTableViewController alloc]init];
     CNNavigationController *homeNesNav = [[CNNavigationController alloc] initWithRootViewController:homeNewsVC];
     
     _crispyMenu = [[MMDrawerController alloc]initWithCenterViewController:homeNesNav leftDrawerViewController:menuDrawerVC];
     
-    [self.crispyMenu setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
-    [self.crispyMenu setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
-    [self.crispyMenu setShouldStretchDrawer:NO];
-    [self.crispyMenu setShowsShadow:YES];
-    
-    
+    [_crispyMenu setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+    [_crispyMenu setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    [_crispyMenu setShouldStretchDrawer:NO];
+    [_crispyMenu setShowsShadow:YES];
+    [_crispyMenu setMaximumLeftDrawerWidth:k_Drawer_W];
     
     self.window.rootViewController = self.crispyMenu;
 }

@@ -51,6 +51,7 @@
                 NSLog(@"success storne");
             }
         }
+        _arrAllTheme =  _cnDM.arrOfThemeModel;
     }
     return _arrAllTheme;
 }
