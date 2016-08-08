@@ -9,9 +9,10 @@
 #import "CNHomeNewsViewController.h"
 #import "CNSegmentView.h"
 #import "AppDelegate.h"
+#import "CNContentCollectionView.h"
 #import "CNNewsThemeSetViewController.h"
 
-@interface CNHomeNewsViewController ()
+@interface CNHomeNewsViewController ()<UICollectionViewDelegate>
 
 @property (nonatomic, strong) CNDataManager *cnDM;
 @property (nonatomic, strong) CNSegmentView *segmentView;
@@ -19,10 +20,10 @@
 @property (nonatomic, strong) NSMutableArray<CNTheme *> *muArrRecommend;
 @property (nonatomic, strong) NSArray <CNTheme *> *arrAllTheme;
 
+
 @end
 
 @implementation CNHomeNewsViewController
-
 - (NSArray<CNTheme *> *)arrAllTheme {
     if (!_arrAllTheme) {
         _arrAllTheme =  _cnDM.arrOfThemeModel;
@@ -80,28 +81,31 @@
     return _muArrRecommend;
 }
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self configureNavBar];
     
     _cnDM = [CNDataManager shareDataController];
     if (self.arrAllTheme.count) {
         NSLog(@"self.arrALL.cout = %lu",(unsigned long)self.arrAllTheme.count);
     }
     
-
-   
+    
+    
+    
+    //设置内容的布局
+    [self setupContentViewFlowLayout];
     
     self.view.backgroundColor = RGBCOLOR_HEX(0xfefefe);
-
     
     self.automaticallyAdjustsScrollViewInsets = NO;
-    self.segmentView = [[CNSegmentView alloc] initWithFrame:CGRectMake(0, 64, SCREENW, 44)];
-    
     NSMutableArray *themeNameArr = [NSMutableArray array];
     for (CNTheme *theme in self.muArrChannelTheme) {
         [themeNameArr addObject:theme.themeName];
     }
+    
+    self.segmentView = [[CNSegmentView alloc] initWithFrame:CGRectMake(0, 64, SCREENW, 44)];
     [self.segmentView cn_segBlock:^(NSInteger selectedIndex, CNSegmentEvent segEvent) {
         if (segEvent == CNSegmentEventAddClick) {
             [self showChannelSetView];
@@ -109,17 +113,22 @@
     }];
     self.segmentView.arrItem = themeNameArr;
     [self.view addSubview:self.segmentView];
-
     
-    [self setNavigationBarItem];
     
 }
 
-- (void)setNavigationBarItem {
+- (void)showChannelSetView {
+    CNNewsThemeSetViewController *newsThemeSetVC = [[CNNewsThemeSetViewController alloc] init];
+    newsThemeSetVC.muArrChannelTheme    = self.muArrChannelTheme;
+    newsThemeSetVC.muArrRecommend       = self.muArrRecommend;
+    [self.navigationController pushViewController:newsThemeSetVC animated:YES];
     
-    self.title = @"CrispyNews";
+}
 
-    CNBarButtonItem *menuItem = [[CNBarButtonItem alloc] barMenuButtomItem];
+- (void)configureNavBar
+{
+    self.title = @"CrispyNews";
+    CNBarButtonItem *menuItem = [[CNBarButtonItem alloc] barButtomItem:@"menu"];
     [menuItem barBlock:^(CNBarButtonItem *barBItem) {
         NSLog(@"menu click");
         AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
@@ -144,17 +153,29 @@
     self.navigationItem.rightBarButtonItems = @[rightSpaceItem,editItem];
     
     
+}
+
+- (void)setupContentViewFlowLayout
+{
+    //定义流水布局
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
     
-//    CNBarButtonItem *backItem = [[CNBarButtonItem alloc] barButtomItem:@"<"];
-//    self.navigationController.navigationItem.backBarButtonItem = backItem;
+    layout.itemSize = CGSizeMake(SCREENW, SCREENH - 108);
+    
+    layout.minimumLineSpacing = 0;
+    
+    layout.minimumInteritemSpacing = 0;
+    
+    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    
+    CNContentCollectionView *contentView = [[CNContentCollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
+    
+    //    self.view.backgroundColor = [UIColor redColor];
+    
+    [self.view addSubview:contentView];
     
 }
--(void)showChannelSetView {
-    CNNewsThemeSetViewController *newsThemeSetVC = [[CNNewsThemeSetViewController alloc] init];
-    newsThemeSetVC.muArrChannelTheme    = self.muArrChannelTheme;
-    newsThemeSetVC.muArrRecommend       = self.muArrRecommend;
-    [self.navigationController pushViewController:newsThemeSetVC animated:YES];
-}
+
 
 
 

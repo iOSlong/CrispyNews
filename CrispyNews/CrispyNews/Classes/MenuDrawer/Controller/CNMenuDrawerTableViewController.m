@@ -7,6 +7,15 @@
 //
 
 #import "CNMenuDrawerTableViewController.h"
+#import "UIViewController+MMDrawerController.h"
+#import "CNNavigationController.h"
+
+#import "CNFavouriteViewController.h"
+#import "CNDownloadViewController.h"
+#import "CNNotificationViewController.h"
+#import "CNSettingsViewController.h"
+#import "CNFeedbackViewController.h"
+
 
 @interface CNMenuDrawerTableViewController ()
 
@@ -14,6 +23,14 @@
 @property (nonatomic, strong) UIButton      *btnUserIcon;
 @property (nonatomic, strong) UILabel       *labelUser;
 @property (nonatomic, strong) NSArray<NSDictionary *>   *arrItem;
+
+@property (nonatomic, strong) CNNotificationViewController    *notificationVC;
+@property (nonatomic, strong) CNFavouriteViewController       *favouriteVC;
+@property (nonatomic, strong) CNDownloadViewController        *downloadVC;
+@property (nonatomic, strong) CNSettingsViewController        *settingsVC;
+@property (nonatomic, strong) CNFeedbackViewController        *feedbackVC;
+
+
 @end
 
 @implementation CNMenuDrawerTableViewController{
@@ -69,11 +86,11 @@
 - (NSArray *)arrItem {
     if (!_arrItem) {
         _arrItem = [NSArray arrayWithObjects:
-                    @{@"ic_redheart":@"Favourite"},
-                    @{@"ic_download":@"Download"},
-                    @{@"ic_bell"    :@"Notification"},
-                    @{@"ic_gear"    :@"Settings"},
-                    @{@"ic_feedback":@"Feedback"},
+                    @{@"imgName":@"ic_redheart",@"itemName":@"Favourite",      @"VC":self.favouriteVC},
+                    @{@"imgName":@"ic_download",@"itemName":@"Download",       @"VC":self.downloadVC},
+                    @{@"imgName":@"ic_bell"    ,@"itemName":@"Notification",   @"VC":self.notificationVC},
+                    @{@"imgName":@"ic_gear"    ,@"itemName":@"Settings",       @"VC":self.settingsVC},
+                    @{@"imgName":@"ic_feedback",@"itemName":@"Feedback",       @"VC":self.feedbackVC},
                     nil];
     }
     return _arrItem;
@@ -119,10 +136,12 @@
     }
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    NSString *itemKey = [[self.arrItem[indexPath.row] allKeys] lastObject];
-    cell.imageView.image = [UIImage imageNamed:itemKey];
+    NSDictionary *dict = self.arrItem[indexPath.row];
+    cell.imageView.image = [UIImage imageNamed:[dict objectForKey:@"imgName"]];
+    
     [cell.imageView.layer setNeedsDisplayInRect:CGRectMake(5, 5, cell.imageView.width - 10, cell.imageView.height -10)];
-    cell.textLabel.text = [self.arrItem[indexPath.row] objectForKey:itemKey];
+    cell.textLabel.text =[dict objectForKey:@"itemName"];
+    
     
     // Configure the cell...
     
@@ -133,6 +152,53 @@
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 45;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSDictionary *dict = self.arrItem[indexPath.row];
+    
+    CNViewController *destVC = [dict objectForKey:@"VC"];
+    
+    [self.mm_drawerController closeDrawerAnimated:YES completion:^(BOOL finished) {
+        
+    }];
+    CNNavigationController *nav = (CNNavigationController *)self.mm_drawerController.centerViewController;
+    [nav pushViewController:destVC animated:YES];
+}
+
+
+- (CNFavouriteViewController *)favouriteVC {
+    if (!_favouriteVC) {
+        _favouriteVC = [[CNFavouriteViewController alloc] init];
+    }
+    return _favouriteVC;
+}
+- (CNDownloadViewController *)downloadVC {
+    if (!_downloadVC) {
+        _downloadVC = [[CNDownloadViewController alloc] init];
+    }
+    return _downloadVC;
+}
+- (CNNotificationViewController *)notificationVC {
+    if (!_notificationVC) {
+        _notificationVC = [[CNNotificationViewController alloc] init];
+    }
+    return _notificationVC;
+}
+- (CNSettingsViewController *)settingsVC {
+    if (!_settingsVC) {
+        _settingsVC = [[CNSettingsViewController alloc] init];
+    }
+    return _settingsVC;
+}
+- (CNFeedbackViewController *)feedbackVC {
+    if (!_feedbackVC) {
+        _feedbackVC = [[CNFeedbackViewController alloc] init];
+    }
+    return _feedbackVC;
+}
+
+
 
 
 #pragma mark - ScrollView Delegate
@@ -150,5 +216,7 @@
         self.labelUser.top          = self.btnUserIcon.bottom;
     }
 }
+
+
 
 @end

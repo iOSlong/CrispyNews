@@ -14,12 +14,13 @@
 
 
 - (instancetype)barMenuButtomItem {
-    UIButton *menuButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 60, 40)];
-    
+    UIImage *image  = [UIImage imageNamed:@"ic_back"];
+    CGFloat img_W   = CGImageGetWidth(image.CGImage)/2;
+    CGFloat img_H   = CGImageGetHeight(image.CGImage)/2;
+    UIButton *menuButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 34, 34 * img_H/img_W)];
     [menuButton addTarget:self action:@selector(barItemEvent:) forControlEvents:UIControlEventTouchUpInside];
-    [menuButton setTitle:@"menu" forState:UIControlStateNormal];
     [menuButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-//    [menuButton setBackgroundImage:[UIImage imageNamed:@"menuBarItem"] forState:UIControlStateNormal];
+    [menuButton setBackgroundImage:image forState:UIControlStateNormal];
     return  [self initWithCustomView:menuButton];
 }
 

@@ -42,8 +42,8 @@ static NSString *const footerId = @"footerId";
     /// 2. 设置导航条上的字体颜色
     NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName, nil];
     [self.navigationController.navigationBar setTitleTextAttributes:attributes];
-
-
+    
+    
     [self setNavigationBarItem];
     
     [self configureCollectionView];
@@ -62,7 +62,7 @@ static NSString *const footerId = @"footerId";
     UIBarButtonItem *rightSpaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
     rightSpaceItem.width =  iPhone6Plus? -15:-8;
     self.navigationItem.leftBarButtonItems = @[rightSpaceItem,editItem];
-
+    
 }
 
 - (void)configureCollectionView {
@@ -78,7 +78,7 @@ static NSString *const footerId = @"footerId";
     layout.itemSize     = CGSizeMake(85, 38);
     //设置分区的EdgeInset
     layout.sectionInset = UIEdgeInsetsMake(15, 15, 15, 15);
-
+    
     
     
     //创建一个collectionView，通过布局策略来创建
@@ -89,7 +89,7 @@ static NSString *const footerId = @"footerId";
     self.collectionView.allowsSelection = YES;
     self.collectionView.backgroundColor = [UIColor clearColor];
     self.collectionView.allowsMultipleSelection = YES;
-
+    
     //注册item类型，这里使用系统的cell类型(注意：collectionView在完成代理之前必须要注册一个cell)
     [self.collectionView registerClass:[CNThemeCollectionViewCell class] forCellWithReuseIdentifier:cellId];
     [self.collectionView registerClass:[CNThemeCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerId];
@@ -97,6 +97,53 @@ static NSString *const footerId = @"footerId";
     
     
     [self.view addSubview:self.collectionView];
+    
+    
+    
+    
+    //    //此处给其增加长按手势，用此手势触发cell移动效果
+    UILongPressGestureRecognizer *longGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handlelongGesture:)];
+    [_collectionView addGestureRecognizer:longGesture];
+}
+
+- (void)handlelongGesture:(UILongPressGestureRecognizer *)longGesture {
+    //判断手势状态
+    switch (longGesture.state) {
+        case UIGestureRecognizerStateBegan:{
+            //判断手势落点位置是否在路径上
+            NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:[longGesture locationInView:self.collectionView]];
+            if (indexPath == nil) {
+                break;
+            }
+            //在路径上则开始移动该路径上的cell
+            BOOL canMove = [self.collectionView beginInteractiveMovementForItemAtIndexPath:indexPath];
+            NSLog(@"canMove = %d",canMove);
+        }
+            break;
+        case UIGestureRecognizerStateChanged:
+            //移动过程当中随时更新cell位置
+            [self.collectionView updateInteractiveMovementTargetPosition:[longGesture locationInView:self.collectionView]];
+            break;
+        case UIGestureRecognizerStateEnded:
+            //移动结束后关闭cell移动
+            [self.collectionView endInteractiveMovement];
+            break;
+        default:
+            [self.collectionView cancelInteractiveMovement];
+            break;
+    }
+}
+
+- (void)collectionView:(UICollectionView *)collectionView moveItemAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
+    //    id objc = [self.muArrRecommend objectAtIndex:sourceIndexPath.item];
+    //    //从资源数组中移除该数据
+    //    [self.muArrRecommend removeObject:objc];
+    //    //将数据插入到资源数组中的目标位置上
+    //    [self.muArrRecommend insertObject:objc atIndex:destinationIndexPath.item];
+}
+
+- (BOOL)collectionView:(UICollectionView *)collectionView canMoveItemAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
 }
 
 
@@ -157,7 +204,7 @@ static NSString *const footerId = @"footerId";
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     return CGSizeMake(85, 38);
-   
+    
 }
 
 
@@ -232,6 +279,9 @@ static NSString *const footerId = @"footerId";
 {
     return (CGSize){SCREENW,2};
 }
+
+
+
 
 
 
