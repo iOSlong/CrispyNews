@@ -9,13 +9,17 @@
 #import "CNHomeNewsViewController.h"
 #import "CNSegmentView.h"
 #import "AppDelegate.h"
-#import "CNContentCollectionView.h"
 #import "CNNewsThemeSetViewController.h"
+#import "CNPageScrollViewController.h"
+#import "CNNewsListViewController.h"
+#import "CNNewsDetailViewController.h"
 
-@interface CNHomeNewsViewController ()<UICollectionViewDelegate>
+
+@interface CNHomeNewsViewController ()<UICollectionViewDelegate,CNPageScrollViewControllerDelegate>
 
 @property (nonatomic, strong) CNDataManager *cnDM;
 @property (nonatomic, strong) CNSegmentView *segmentView;
+@property (nonatomic, strong) CNPageScrollViewController  *pageScrollViewController;
 @property (nonatomic, strong) NSMutableArray<CNTheme *> *muArrChannelTheme;
 @property (nonatomic, strong) NSMutableArray<CNTheme *> *muArrRecommend;
 @property (nonatomic, strong) NSArray <CNTheme *> *arrAllTheme;
@@ -81,10 +85,26 @@
     return _muArrRecommend;
 }
 
+
+- (CNPageScrollViewController *)pageScrollViewController {
+    if (!_pageScrollViewController) {
+        _pageScrollViewController = [[CNPageScrollViewController alloc] init];
+        _pageScrollViewController.pageScrollDelegate = self;
+    }
+    return _pageScrollViewController;
+}
+
+- (void)pageScrollViewController:(UIViewController *)currentViewController page:(NSInteger)pageIndex {
+    self.segmentView.selectedIndex = pageIndex;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self configureNavBar];
+    self.view.backgroundColor = RGBCOLOR_HEX(0xfefefe);
+    self.automaticallyAdjustsScrollViewInsets = NO;
     
     _cnDM = [CNDataManager shareDataController];
     if (self.arrAllTheme.count) {
@@ -92,32 +112,38 @@
     }
     
     
-    
-    
-    //设置内容的布局
-    [self setupContentViewFlowLayout];
-    
-    self.view.backgroundColor = RGBCOLOR_HEX(0xfefefe);
-    
-    self.automaticallyAdjustsScrollViewInsets = NO;
     NSMutableArray *themeNameArr = [NSMutableArray array];
     for (CNTheme *theme in self.muArrChannelTheme) {
         [themeNameArr addObject:theme.themeName];
     }
-    
-    self.segmentView = [[CNSegmentView alloc] initWithFrame:CGRectMake(0, 64, SCREENW, 44)];
+    self.segmentView = [[CNSegmentView alloc] initWithFrame:CGRectMake(0, 64, SCREENW, [CNSegmentView segmentHeight])];
     [self.segmentView cn_segBlock:^(NSInteger selectedIndex, CNSegmentEvent segEvent) {
         if (segEvent == CNSegmentEventAddClick) {
             [self showChannelSetView];
+        }else if (segEvent == CNSegmentEventItemClick){
+            [self.pageScrollViewController setSelectedIndex:selectedIndex animation:YES];
         }
     }];
     self.segmentView.arrItem = themeNameArr;
     [self.view addSubview:self.segmentView];
     
+    //    [self.view addSubview:self.scrollView];
     
+    [self addChildViewController:self.pageScrollViewController];
+    [self.view addSubview:self.pageScrollViewController.view];
+    self.pageScrollViewController.view.top = 64 + self.segmentView.height;
+    [self.view bringSubviewToFront:self.segmentView];
+    
+    for (int i = 0; i< self.muArrChannelTheme.count; i ++) {
+        CNNewsListViewController *textVC = [[CNNewsListViewController alloc] init];
+        [self.pageScrollViewController addViewController:textVC];
+    }
 }
 
 - (void)showChannelSetView {
+    
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
     CNNewsThemeSetViewController *newsThemeSetVC = [[CNNewsThemeSetViewController alloc] init];
     newsThemeSetVC.muArrChannelTheme    = self.muArrChannelTheme;
     newsThemeSetVC.muArrRecommend       = self.muArrRecommend;
@@ -146,7 +172,10 @@
     CNBarButtonItem *editItem = [[CNBarButtonItem alloc] barButtomItem:@"Edit"];
     [editItem barBlock:^(CNBarButtonItem *barBItem) {
         NSLog(@"Edit Click");
-        [self showChannelSetView];
+        //        [self showChannelSetView];
+        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+        CNNewsDetailViewController *_newsDetail = [[CNNewsDetailViewController alloc] init];
+        [self.navigationController pushViewController:_newsDetail animated:YES];
     }];
     UIBarButtonItem *rightSpaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
     rightSpaceItem.width =  iPhone6Plus? -15:-8;
@@ -155,34 +184,7 @@
     
 }
 
-- (void)setupContentViewFlowLayout
-{
-    //定义流水布局
-    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
-    
-    layout.itemSize = CGSizeMake(SCREENW, SCREENH - 108);
-    
-    layout.minimumLineSpacing = 0;
-    
-    layout.minimumInteritemSpacing = 0;
-    
-    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    
-    CNContentCollectionView *contentView = [[CNContentCollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
-    
-    //    self.view.backgroundColor = [UIColor redColor];
-    
-    [self.view addSubview:contentView];
-    
-}
 
-
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 @end

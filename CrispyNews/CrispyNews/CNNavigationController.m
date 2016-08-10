@@ -18,14 +18,21 @@
     [super viewDidLoad];
     
     
-    /// 1. 设置背景颜色
+    /// 1. 设置背景颜色  Item图标颜色
     [self.navigationBar setBarTintColor:RGBCOLOR_HEX(0xf95900)];
+    [self.navigationBar setTintColor:[UIColor whiteColor]];
     
     
     /// 2. 设置导航条上的字体颜色
     NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,[UIFont systemFontOfSize:24],NSFontAttributeName, nil];
     [self.navigationBar setTitleTextAttributes:attributes];
     [self.navigationBar setTranslucent:YES];
+    
+#if 0
+    [[UINavigationBar appearance] setBarTintColor:RGBCOLOR_HEX(0xf95900)];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+#endif
 
 }
 

@@ -28,6 +28,7 @@
     return btn;
 }
 
+
 - (void)setTitle:(NSString *)title forState:(UIControlState)state
 {
     [super setTitle:title forState:state];
@@ -71,6 +72,9 @@
     CNSegmentBlock _CNSBlock;
 }
 
++ (CGFloat)segmentHeight {
+    return 44;
+}
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -83,13 +87,13 @@
         self.layer.shadowColor  = [UIColor lightGrayColor].CGColor;
         self.layer.shadowOpacity= 0.6;
         self.layer.shadowPath = [UIBezierPath bezierPathWithRect:CGRectMake(0, 44, SCREENW , 2)].CGPath;
-
+        
         
         [self configureItmes];
         [self addSubview:self.scrollView];
         self.scrollView.width   = self.width - self.height;
         [self.scrollView addSubview:self.layerLine];
-
+        
         
         [self addSubview:self.btnAdd];
         self.btnAdd.x           = self.scrollView.width+2;
@@ -114,7 +118,7 @@
         _btnAdd.layer.shadowColor  = [UIColor lightGrayColor].CGColor;
         _btnAdd.layer.shadowOpacity= 0.7;
         _btnAdd.layer.shadowPath = [UIBezierPath bezierPathWithRect:CGRectMake(-2.5,0,2.5, self.height)].CGPath;
-
+        
     }
     return _btnAdd;
 }
@@ -158,7 +162,7 @@
         }
     }
     [self.muArrBtn removeAllObjects];
-
+    
     
     
     
@@ -173,7 +177,7 @@
         
         [self.scrollView addSubview:btnItem];
         [self.muArrBtn addObject:btnItem];
-
+        
     }
     
     [self displaySuitItems];
@@ -222,7 +226,7 @@
             CNSegmentBtn *btnItem = [CNSegmentBtn buttonWithType:UIButtonTypeCustom];
             [btnItem setTitle:items[i] forState:UIControlStateNormal];
             [btnItem addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
-           
+            
             [btnItem setTag:self.muArrBtn.count];
             
             [self.scrollView addSubview:btnItem];
@@ -255,7 +259,8 @@
 - (void)setSelectedIndex:(NSInteger)selectedIndex {
     if (selectedIndex < self.muArrBtn.count) {
         _selectedIndex = selectedIndex;
-        [self moveToBtn:self.muArrBtn[selectedIndex]];
+        
+        [self animationShowBtn:self.muArrBtn[selectedIndex]];
         
         if (self.currentBtn) {
             self.currentBtn.selected = NO;
@@ -283,14 +288,22 @@
 }
 
 - (void)btnClick:(CNSegmentBtn *)btn {
-    [self moveToBtn:btn];
     
+    self.selectedIndex = btn.tag;
+    if (_CNSBlock) {
+        _CNSBlock(btn.tag, CNSegmentEventItemClick);
+    }
+    NSLog(@"%@ -- %ld ",btn.titleLabel.text, (long)btn.tag);
+}
+
+- (void)animationShowBtn:(CNSegmentBtn *)btn {
+    [self moveToBtn:btn];
     
     CGFloat btnCenterX      = btn.center.x;
     CGFloat contentW        = self.scrollView.contentSize.width;
     CGFloat halfSizeW       = self.scrollView.width * 0.3;
     CGFloat offsetX          = self.scrollView.width * btnCenterX / self.scrollView.contentSize.width;
-
+    
     
     [UIView animateWithDuration:0.5 animations:^{
         if (btnCenterX <= halfSizeW) {
@@ -301,16 +314,7 @@
             self.scrollView.contentOffset = CGPointMake(btnCenterX - offsetX, 0);
         }
     }];
-    
-    
-    
-    self.selectedIndex = btn.tag;
-    if (_CNSBlock) {
-        _CNSBlock(btn.tag, CNSegmentEventItemClick);
-    }
-    NSLog(@"%@ -- %ld ",btn.titleLabel.text, (long)btn.tag);
 }
-
 
 - (void)cn_segBlock:(CNSegmentBlock)thisBlock {
     _CNSBlock = thisBlock;

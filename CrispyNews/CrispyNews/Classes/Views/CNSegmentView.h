@@ -38,9 +38,12 @@ typedef void(^CNSegmentBlock)(NSInteger selectedIndex,CNSegmentEvent segEvent);
 @property (nonatomic, strong) UIColor *colorHighlight;
 @property (nonatomic, assign) NSInteger selectedIndex;
 
++ (CGFloat)segmentHeight;
+
 - (void)cn_segBlock:(CNSegmentBlock )thisBlock;
 - (void)insertItem:(NSString *)item atIndex:(NSInteger)index;
 - (void)addItems:(NSArray *)items;
+
 
 
 @end

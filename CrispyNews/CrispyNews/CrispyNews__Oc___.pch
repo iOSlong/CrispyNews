@@ -14,6 +14,8 @@
 
 #import <MMDrawerController/MMDrawerController.h>
 #import "constantUI.h"
+#import "constantStr.h"
+#import "CNHttpRequest.h"
 
 
 //如果有Debug这个宏的话,就允许log输出...可变参数
