@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=0.5,maximum-scale=1.0,user-scalable=no"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta content="email=no" name="format-detection"/>
+    <title>CrispyNews</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        body {
+            font-family: Roboto regular, Helvetica;
+            font-size: 12px;
+            background-color: #eee;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+
+        img {
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+
+        section {
+            display: block;
+            padding: 0 2.5em;
+            margin-bottom: 0.83em;
+            background-color: white;
+            clear: both;
+        }
+
+        section:last-child {
+            margin-bottom: 0;
+        }
+
+        h1 {
+            font-size: 2.67em;
+            color: #1b1b1b;
+        }
+
+        header h1 {
+            margin-left: -1em;
+            border-left: .25em solid #fa5800;
+            padding-left: .5em;
+            color: #fa5800;
+            font-family: Roboto Medium, Helvetica;
+        }
+
+        h6 {
+            float: left;
+            padding-right: .5em;
+            font-size: 1.5em;
+            color: #939393;
+            font-weight: normal;
+        }
+
+        .time-icon {
+            padding-left: 2em;
+            border-left: 2px solid #939393;
+            text-align: right;
+            background: url(ic_clock@3x.png) no-repeat .5em;
+            background-size: 1em;
+        }
+
+        p {
+            font-size: 2.17em;
+            line-height: 1.5em;
+            color: #3f3f3f;
+        }
+
+        footer {
+            height: 2em;
+            clear: both;
+        }
+
+        a:link,
+        a:visited,
+        a:hover,
+        a:active {
+            color: black;
+            text-decoration: none;
+        }
+
+        .article-h {
+            padding: 1.125em 0 .5em;
+            line-height: 1.2em;
+            font-weight: 500;
+        }
+
+        .article-img {
+            padding: 3.125em 0;
+        }
+
+        .article-p {
+            padding-bottom: 1.2em;
+        }
+
+        .rec-header-h {
+            padding: 2.5em 0 3.17em;
+        }
+
+        .rec-article {
+            width: 100%;
+            padding-bottom: 1.2em;
+            border-bottom: 0.15em solid #ececec;
+            margin-bottom: 1.2em;
+        }
+
+        .rec-h {
+            line-height: 1.2em;
+            font-weight: 500;
+        }
+
+        .rec-img {
+            float: left;
+            width: 33%;
+            padding-top: 1em;
+            padding-bottom: 1.2em;
+            padding-right: 0.333%;
+        }
+
+        .close-icon {
+            float: right;
+            width: 2em;
+            padding-right: 0.333%;
+            cursor: pointer;
+        }
+
+        .rec-p {
+            padding: 1.12em 0 1.5em;
+        }
+
+        .rec-footer {
+            padding-bottom: 4.17em;
+        }
+
+        .comments-header {
+            padding-top: 3.5em;
+            padding-bottom: 2.5em;
+        }
+
+        .comments-header:after {
+            content: "";
+            display: block;
+            visibility: hidden;
+            clear: both;
+        }
+
+        .item-header {
+            height: 5em;
+            line-height: 5em;
+            vertical-align: middle;
+        }
+
+        .user-img {
+            float: left;
+            width: 5em;
+            height: 5em;
+        }
+
+        .user-name {
+            margin-left: 0.5em;
+            font-size: 2.17em;
+            font-weight: 500;
+        }
+
+        .publish-time {
+            float: right;
+            font-size: 1.83em;
+            color: #a6a6a6;
+        }
+
+        .comments-content {
+            margin-left: 2.8em;
+        }
+
+        .comments-item {
+            margin-top: 4em;
+            padding-bottom: 2.5em;
+            border-bottom: 0.15em solid #ececec;
+        }
+
+        .comments-item:first-child {
+            margin-top: 0;
+        }
+
+        .comments-item:last-child {
+            border-bottom: 0;
+        }
+
+        .arrow {
+            display: block;
+            float: right;
+            width: 4em;
+            height: 4em;
+        }
+
+        .comments-title {
+            float: left;
+        }
+
+        .open {
+            background: url(ic_arrow_up@3x.png) no-repeat center right;
+            background-size: 50%;
+        }
+
+        .close {
+            background: url(ic_arrow_down@3x.png) no-repeat center right;
+            background-size: 50%;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <section class="article">
+            <article>
+                <h1 class="article-h">McCullum leads Trinbago Knight Riders step closer to CPL final</h1>
+                <h6>FreePress journal</h6>
+                <h6 class="time-icon">7mins</h6>
+
+<!--<img src="img-article.jpg" class="article-img">-->
+    <img src="file:///Users/xuewu.long/Library/Developer/CoreSimulator/Devices/AFF6DF66-5C87-4E53-BC37-F160B15F4B5B/data/Containers/Data/Application/A8CACCE6-E1CC-4542-9FC4-21731A1164C5/Documents/img-article.jpg" class="article-img">
+
+                <p class="article-p">Basseterre, Aug 5 (ANI): The Trinbago Knight Riders have defeated the St Lucia
+                    Zouks at the Caribbean
+                    Premier League (CPL) to set up an effective semi-final against the Jamaica Tallawahs for a berth in
+                    the final.</p>
+
+                <p class="article-p">Runs from Brendon McCullum and wickets for Ronsford Beaton allowed them to secure
+                    victory by five
+                    wickets with nine balls to spare. This defeat means the Zouks are eliminated from the CPL for this
+                    season but a first knockout appearance for the franchise will allow them to dream of going further
+                    in 2017.</p>
+
+                <p class="article-p">The Zouks got off to the best possible start for the third successive game thanks
+                    to openers Andre
+                    Fletcher and Johnson Charles. In the matches in Lauderhill, Florida they had stands of 89 and 107.
+                    Here they put on 62 for the first wicket, aided by dropped catches by Kevon Cooper, Umar Akmal and
+                    McCullum. They weren't the last spilled opportunities as seven catches were dropped by the Knight
+                    Riders during the Zouks innings.</p>
+
+                <p class="article-p">The first wicket came when a catch was finally taken, Johnson Charles caught in the
+                    deep by Dwayne
+                    Bravo for 31 (22) off the bowling of Cooper. Three balls later the same thing happened, with Shane
+                    Watson caught by Bravo off Cooper to leave the Zouks 66-2. When Michael Hussey was sold a dummy by
+                    Fletcher and run out in the next over the Zouks found themselves 67-3 having lost three wickets for
+                    five runs in the space of seven balls.</p>
+
+                <p class="article-p">The Zouks also lost David Miller who has struggled for form this Hero CPL. Miller
+                    made a run a ball
+                    13 before he was out slogging Nikita Miller. While all of these wickets were falling at the other
+                    end Fletcher remained at the crease but his run rate was plummeting. When Johnson Charles was
+                    dismissed Fletcher had 30 runs from 22 balls. When Fletcher was out nine overs later he had made 41
+                    runs from 43 balls, making just 11 runs from 21 balls in that period.</p>
+
+                <p class="article-p">The wickets just kept falling with Beaton the chief destroyer as he finished with
+                    figures of 3 for
+                    23, his best return of this CPL at one point taking the wickets of Grant Elliott and Gidron Pope in
+                    successive balls.</p>
+            </article>
+        </section>
+        <section class="recommended">
+            <header class="rec-header-h">
+                <h1>Recommended</h1>
+            </header>
+            <article class="rec-article">
+                <h1 class="rec-h">Pentagon Chief Ashton Carter Lands In India Afghanistan</h1>
+                <img src="img-recommend-01.jpg" alt="" class="rec-img"/>
+                <img src="img-recommend-02.jpg" alt="" class="rec-img"/>
+                <img src="img-recommend-03.jpg" alt="" class="rec-img"/>
+                <footer>
+                    <h6>FreePress journal</h6>
+                    <h6 class="time-icon">7mins</h6>
+                    <img src="ic_close@3x.png" alt="" class="close-icon"/>
+                </footer>
+            </article>
+            <article>
+                <h1 class="rec-h">Pentagon Chief Ashton Carter Lands In India Afghanistan</h1>
+
+                <p class="rec-p">Mr Pence, 37, praised Mr Trump's record as a businessman and said the the country only
+                    had "but one
+                    choice" in November.</p>
+                <footer class="rec-footer">
+                    <h6>Hindustantimes</h6>
+                    <h6 class="time-icon">10mins</h6>
+                </footer>
+            </article>
+        </section>
+        <section class="comments">
+            <header class="comments-header">
+                <h1 class="comments-title">Comments</h1>
+                <a class="arrow open" href="javascript: void(0);"></a>
+            </header>
+            <article class="comments-wrapper">
+                <div class="comments-item">
+                    <header class="item-header">
+                        <div class="user-img"><img src="headicon-comment-01.jpg"></div>
+                        <span class="user-name">Jennifer Smith</span>
+                        <span class="publish-time">13/02/2016 14:09</span>
+                    </header>
+                    <p class="comments-content">
+                        Hey let's catch up soon. Do you want to grab lunch sometime this weekend?
+                    </p>
+                </div>
+                <div class="hide" id="content-template">
+                    <div class="comments-item">
+                        <header class="item-header">
+                            <div class="user-img"><img src=""></div>
+                            <span class="user-name"></span>
+                            <span class="publish-time"></span>
+                        </header>
+                        <p class="comments-content">
+                        </p>
+                    </div>
+                </div>
+                <div class="comments-item">
+                    <header class="item-header">
+                        <div class="user-img"><img src="headicon-comment-02.jpg"></div>
+                        <span class="user-name">Cece Toto</span>
+                        <span class="publish-time">13/02/2016 04:09</span>
+                    </header>
+                    <p class="comments-content">
+                        Hey let's catch up soon. Do you want to grab lunch sometime this weekend?
+                    </p>
+                </div>
+            </article>
+        </section>
+    </div>
+    <script>
+        window.Operate = window.Operate || (function () {
+                    function Operate() {
+                    }
+
+                    /**
+                     * options 为json字符串
+                     * eg: var options = '{"userImgUrl":"headicon-comment-01.jpg","userName":"lily","publishTime":"08/08/2016 19:00","content":"hello world"}';
+                     * Operate.addComment(options);
+                     */
+                    Operate.prototype.addComment = function (options) {
+                        if (!options) {
+                            return;
+                        }
+                        var obj = JSON.parse(options);
+                        var template = document.querySelector("#content-template");
+                        var temp = template.cloneNode(true);
+                        temp.querySelector('.user-img img') && (temp.querySelector('.user-img img').src = obj.userImgUrl);
+                        temp.querySelector('.user-name') && (temp.querySelector('.user-name').innerHTML = obj.userName);
+                        temp.querySelector('.publish-time') && (temp.querySelector('.publish-time').innerHTML = obj.publishTime);
+                        temp.querySelector('.comments-content') && (temp.querySelector('.comments-content').innerHTML = obj.content);
+                        temp.classList.remove('hide');
+                        var wrapper = document.querySelector(".comments-wrapper"),
+                                firstNode = wrapper.firstChild;
+                        wrapper.insertBefore(temp, firstNode);
+                    };
+                    return new Operate();
+                })();
+
+        (function () {
+            //展开折叠评论内容
+            var closeBtn = document.querySelector('.arrow');
+            closeBtn.addEventListener('click', function (event) {
+                event.preventDefault();
+                var con = document.querySelector('.comments-wrapper');
+                if (this.classList.contains('open')) {
+                    this.classList.remove('open');
+                    this.classList.add('close');
+                    con.classList.add('hide');
+                } else {
+                    this.classList.remove('close');
+                    this.classList.add('open');
+                    con.classList.remove('hide');
+                    document.body.scrollTop = document.body.scrollHeight;
+                }
+            }, false);
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "4ADFC8D4C6073C04C51FCE5FD3D3334F48D4A3EF+++9CC1F33" : 9223372036854775807,
+    "4ADFC8D4C6073C04C51FCE5FD3D3334F48D4A3EF+++6B8D117" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E60AC83E-43BD-4BD1-B2AC-881B2DC11D0D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "4ADFC8D4C6073C04C51FCE5FD3D3334F48D4A3EF+++9CC1F33" : "..",
+    "4ADFC8D4C6073C04C51FCE5FD3D3334F48D4A3EF+++6B8D117" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TopNews",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TopNews.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "legitlab.letv.cn:longxuewu\/iOS-topnews.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4ADFC8D4C6073C04C51FCE5FD3D3334F48D4A3EF+++6B8D117"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "10.154.250.99:xuewu\/ios-topnews.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4ADFC8D4C6073C04C51FCE5FD3D3334F48D4A3EF+++9CC1F33"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+//
+//  PrefixHeader.pch
+//  TopNews
+//
+//  Created by xuewu.long on 16/9/9.
+//  Copyright © 2016年 levt. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#ifdef __OBJC__
+
+
+#import <MMDrawerController/MMDrawerController.h>
+#import "constantUI.h"
+#import "constantStr.h"
+#import "CNHttpRequest.h"
+#import "XKObjcSugar.h"
+#import "CNUtils.h"
+#import "CNDefult.h"
+
+
+//如果有Debug这个宏的话,就允许log输出...可变参数
+#ifdef DEBUG
+#define NSLog(fmt, ...) NSLog((@"%s [Line %d]" fmt), __PRETTY_FUNCTION__,__LINE__,##__VA_ARGS__)
+#else
+#define NSLog(...)
+#endif
+
+#define  CNOUT(userAgentInto)   NSLog(@"%@",userAgentInto)
+
+
+#define weakSelf()                                          __weak __typeof(self) weakSelf = self
+#define strongSelf()                                        __strong __typeof(weakSelf) strongSelf = weakSelf
+#define blockSelf()                                         __block __typeof(self) blockSelf = self
+
+
+
+
+
+
+// 获取当前设备进行判断
+#define iPhone4s ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define iPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define iPhone6Plus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
+
+
+//
+#define IS_IPAD                                             (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPHONE                                           (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_RETINA                                           ([[UIScreen mainScreen] scale] >= 2.0)
+
+
+
+
+
+
+
+
+#endif
+
+
+#endif /* PrefixHeader_pch */

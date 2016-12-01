@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AccountResponse</key>
+	<string>{&quot;code&quot;:200,&quot;result&quot;:{&quot;registCountry&quot;:&quot;CN&quot;,&quot;mixCommentClose&quot;:null,&quot;birthday&quot;:null,&quot;status&quot;:&quot;1&quot;,&quot;nickname&quot;:&quot;KevinChen&quot;,&quot;picture&quot;:&quot;http:\/\/i3.letvimg.com\/lc04_user\/201610\/10\/20\/05\/333304201476101122.jpg,http:\/\/i3.letvimg.com\/lc06_user\/201610\/10\/20\/05\/333304201476101135_200_200.jpg,http:\/\/i3.letvimg.com\/lc06_user\/201610\/10\/20\/05\/333304201476101135_70_70.jpg,http:\/\/i3.letvimg.com\/lc06_user\/201610\/10\/20\/05\/333304201476101135_50_50.jpg&quot;,&quot;ssouid&quot;:null,&quot;smsLoginSwitch&quot;:0,&quot;productId&quot;:null,&quot;id&quot;:null,&quot;deviceNumber&quot;:null,&quot;token&quot;:&quot;20733c22e1ZDuO5wo8Dm2dSV8W1qWqv4OCrKur3VpH1KMCOVB0Km2NIoTYSxnGA0q0EAY4ac4g&quot;,&quot;uid&quot;:&quot;240518660&quot;,&quot;email&quot;:&quot;&quot;,&quot;mobile&quot;:&quot;&quot;,&quot;lastModifyPwdTime&quot;:null,&quot;imgUrl&quot;:null,&quot;headUrls&quot;:[&quot;http:\/\/i3.letvimg.com\/lc04_user\/201610\/10\/20\/05\/333304201476101122.jpg&quot;,&quot;http:\/\/i3.letvimg.com\/lc06_user\/201610\/10\/20\/05\/333304201476101135_200_200.jpg&quot;,&quot;http:\/\/i3.letvimg.com\/lc06_user\/201610\/10\/20\/05\/333304201476101135_70_70.jpg&quot;,&quot;http:\/\/i3.letvimg.com\/lc06_user\/201610\/10\/20\/05\/333304201476101135_50_50.jpg&quot;],&quot;gender&quot;:&quot;0&quot;,&quot;regProductid&quot;:null,&quot;age&quot;:0,&quot;createTime&quot;:null,&quot;isIdentify&quot;:1,&quot;loginProductid&quot;:null,&quot;phoneNumber&quot;:null,&quot;isFirst&quot;:0,&quot;username&quot;:&quot;facebook_178040235977027&quot;},&quot;ext&quot;:{},&quot;errorMsg&quot;:null,&quot;success&quot;:true,&quot;version&quot;:null}</string>
+	<key>UserInfo</key>
+	<dict>
+		<key>fcToken</key>
+		<string>EAARNFJekbXkBAKmZAYs7wefmVsq4O4t68PLuZAJiRbJEobF2fXDV61nd4JYsef2KMZAcfcAZALdjf8JmyLpO8yorOZCmSiBZCvmzeZCMuJUahmQCAsp5QKE4i7TNZAzGXlZAj6KuC7ZBlma5sGfnMoaDuVWZBeh9LQTEZBgorGbJZB1WQMW48Us0DekL5Ywv7tB92ydg6BUv0QRSMTjsxaaS15r14EY5p0ONnnkAZD</string>
+	</dict>
+	<key>Defult</key>
+	<array>
+		<string>Top</string>
+		<string>India</string>
+		<string>Entertainment</string>
+		<string>Cricket</string>
+		<string>Technology</string>
+		<string>Education</string>
+		<string>Business</string>
+		<string>Lifestyle</string>
+		<string>World</string>
+		<string>Auto</string>
+		<string>Sports</string>
+	</array>
+</dict>
+</plist>
