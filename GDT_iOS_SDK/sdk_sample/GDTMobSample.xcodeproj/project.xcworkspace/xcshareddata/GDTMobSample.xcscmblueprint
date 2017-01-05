@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "adbfbee0-7761-2149-acd7-1666315adda3++126",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "adbfbee0-7761-2149-acd7-1666315adda3++126" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "adbfbee0-7761-2149-acd7-1666315adda3++126" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D030042F-F60C-429F-9F6A-9ED63984D186",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "adbfbee0-7761-2149-acd7-1666315adda3++126" : "trunk-iOS-MobApp-SDK\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "GDTMobSample",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "release\/iOS\/GDT_iOS_SDK\/sdk_sample\/GDTMobSample.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/tc-svn.tencent.com\/isd\/isd_qzonebrand_rep",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "adbfbee0-7761-2149-acd7-1666315adda3++126"
+    }
+  ]
+}

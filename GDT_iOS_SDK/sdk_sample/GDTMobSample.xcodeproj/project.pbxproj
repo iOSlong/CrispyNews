@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		45F416351DCAE99E0010AA0D /* GDTStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45F416301DCAE99E0010AA0D /* GDTStoryboard.storyboard */; };
+		45F416361DCAE99E0010AA0D /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45F416321DCAE99E0010AA0D /* SplashViewController.m */; };
+		8E2860991E125FE300EEC3BC /* SplashBottomLogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8E2860981E125FE300EEC3BC /* SplashBottomLogo.jpg */; };
+		CCA3478B1A1C7D0700AF55B3 /* NativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA347891A1C7D0700AF55B3 /* NativeViewController.m */; };
+		CCB21005188D19B5008C3EB5 /* InterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB21003188D19B5008C3EB5 /* InterstitialViewController.m */; };
+		CCB3BC3D18695372007C3070 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB3BC3C18695372007C3070 /* Security.framework */; };
+		CCB6A1B61855B345005DFD0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB6A1B51855B345005DFD0F /* Foundation.framework */; };
+		CCB6A1B81855B345005DFD0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB6A1B71855B345005DFD0F /* CoreGraphics.framework */; };
+		CCB6A1BA1855B345005DFD0F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB6A1B91855B345005DFD0F /* UIKit.framework */; };
+		CCB6A1C01855B345005DFD0F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CCB6A1BE1855B345005DFD0F /* InfoPlist.strings */; };
+		CCB6A1C21855B345005DFD0F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB6A1C11855B345005DFD0F /* main.m */; };
+		CCB6A1C61855B345005DFD0F /* GDTMobAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB6A1C51855B345005DFD0F /* GDTMobAppDelegate.m */; };
+		CCB6A1C81855B345005DFD0F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCB6A1C71855B345005DFD0F /* Images.xcassets */; };
+		CCB6A2391855C193005DFD0F /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB6A2371855C193005DFD0F /* BannerViewController.m */; };
+		CCB6A23D1855C1AC005DFD0F /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCB6A23A1855C1AC005DFD0F /* ViewController.xib */; };
+		CCB6A23E1855C1AC005DFD0F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB6A23C1855C1AC005DFD0F /* ViewController.m */; };
+		CCB6A2431855C99B005DFD0F /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB6A2421855C99B005DFD0F /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		CCB6A2451855C9DC005DFD0F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB6A2441855C9DC005DFD0F /* CoreLocation.framework */; };
+		CCB6A2471855C9E3005DFD0F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB6A2461855C9E3005DFD0F /* QuartzCore.framework */; };
+		CCB6A2491855C9EA005DFD0F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB6A2481855C9EA005DFD0F /* SystemConfiguration.framework */; };
+		CCB6A24B1855C9F2005DFD0F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB6A24A1855C9F2005DFD0F /* CoreTelephony.framework */; };
+		CCB6A24D1855C9F9005DFD0F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB6A24C1855C9F9005DFD0F /* libz.dylib */; };
+		CCDB246E19AC340500D17B6F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCDB246D19AC340500D17B6F /* StoreKit.framework */; };
+		CCFBA4021C2001840093FA19 /* libGDTMobSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCFBA4011C2001840093FA19 /* libGDTMobSDK.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		45F416301DCAE99E0010AA0D /* GDTStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = GDTStoryboard.storyboard; path = GDTMobSample/GDTAdTypes/GDTStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
+		45F416311DCAE99E0010AA0D /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SplashViewController.h; path = GDTMobSample/GDTAdTypes/SplashViewController.h; sourceTree = SOURCE_ROOT; };
+		45F416321DCAE99E0010AA0D /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SplashViewController.m; path = GDTMobSample/GDTAdTypes/SplashViewController.m; sourceTree = SOURCE_ROOT; };
+		8E2860981E125FE300EEC3BC /* SplashBottomLogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SplashBottomLogo.jpg; sourceTree = "<group>"; };
+		CCA347881A1C7D0700AF55B3 /* NativeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NativeViewController.h; path = GDTMobSample/GDTAdTypes/NativeViewController.h; sourceTree = SOURCE_ROOT; };
+		CCA347891A1C7D0700AF55B3 /* NativeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NativeViewController.m; path = GDTMobSample/GDTAdTypes/NativeViewController.m; sourceTree = SOURCE_ROOT; };
+		CCB21002188D19B5008C3EB5 /* InterstitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InterstitialViewController.h; path = GDTMobSample/GDTAdTypes/InterstitialViewController.h; sourceTree = SOURCE_ROOT; };
+		CCB21003188D19B5008C3EB5 /* InterstitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InterstitialViewController.m; path = GDTMobSample/GDTAdTypes/InterstitialViewController.m; sourceTree = SOURCE_ROOT; };
+		CCB3BC3C18695372007C3070 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		CCB6A1B21855B345005DFD0F /* GDTMobSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GDTMobSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCB6A1B51855B345005DFD0F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CCB6A1B71855B345005DFD0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CCB6A1B91855B345005DFD0F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CCB6A1BD1855B345005DFD0F /* GDTMobSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GDTMobSample-Info.plist"; sourceTree = "<group>"; };
+		CCB6A1BF1855B345005DFD0F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CCB6A1C11855B345005DFD0F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CCB6A1C31855B345005DFD0F /* GDTMobSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GDTMobSample-Prefix.pch"; sourceTree = "<group>"; };
+		CCB6A1C41855B345005DFD0F /* GDTMobAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTMobAppDelegate.h; sourceTree = "<group>"; };
+		CCB6A1C51855B345005DFD0F /* GDTMobAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDTMobAppDelegate.m; sourceTree = "<group>"; };
+		CCB6A1C71855B345005DFD0F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CCB6A1CE1855B345005DFD0F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		CCB6A2361855C193005DFD0F /* BannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BannerViewController.h; path = GDTMobSample/GDTAdTypes/BannerViewController.h; sourceTree = SOURCE_ROOT; };
+		CCB6A2371855C193005DFD0F /* BannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BannerViewController.m; path = GDTMobSample/GDTAdTypes/BannerViewController.m; sourceTree = SOURCE_ROOT; };
+		CCB6A23A1855C1AC005DFD0F /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		CCB6A23B1855C1AC005DFD0F /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CCB6A23C1855C1AC005DFD0F /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CCB6A2421855C99B005DFD0F /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		CCB6A2441855C9DC005DFD0F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CCB6A2461855C9E3005DFD0F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CCB6A2481855C9EA005DFD0F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CCB6A24A1855C9F2005DFD0F /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		CCB6A24C1855C9F9005DFD0F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		CCC5C1E21C61B9340081F04A /* GDTMobBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDTMobBannerView.h; path = lib/GDTMobBannerView.h; sourceTree = "<group>"; };
+		CCC5C1E31C61B9340081F04A /* GDTMobInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDTMobInterstitial.h; path = lib/GDTMobInterstitial.h; sourceTree = "<group>"; };
+		CCC5C1E41C61B9340081F04A /* GDTNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDTNativeAd.h; path = lib/GDTNativeAd.h; sourceTree = "<group>"; };
+		CCC5C1E51C61B9340081F04A /* GDTSplashAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDTSplashAd.h; path = lib/GDTSplashAd.h; sourceTree = "<group>"; };
+		CCC5C1E61C61B9340081F04A /* GDTTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDTTrack.h; path = lib/GDTTrack.h; sourceTree = "<group>"; };
+		CCDB246D19AC340500D17B6F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		CCFBA4011C2001840093FA19 /* libGDTMobSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGDTMobSDK.a; path = lib/libGDTMobSDK.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CCB6A1AF1855B345005DFD0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCDB246E19AC340500D17B6F /* StoreKit.framework in Frameworks */,
+				CCB3BC3D18695372007C3070 /* Security.framework in Frameworks */,
+				CCB6A24D1855C9F9005DFD0F /* libz.dylib in Frameworks */,
+				CCB6A24B1855C9F2005DFD0F /* CoreTelephony.framework in Frameworks */,
+				CCB6A2491855C9EA005DFD0F /* SystemConfiguration.framework in Frameworks */,
+				CCB6A2471855C9E3005DFD0F /* QuartzCore.framework in Frameworks */,
+				CCB6A2451855C9DC005DFD0F /* CoreLocation.framework in Frameworks */,
+				CCB6A2431855C99B005DFD0F /* AdSupport.framework in Frameworks */,
+				CCB6A1B81855B345005DFD0F /* CoreGraphics.framework in Frameworks */,
+				CCB6A1BA1855B345005DFD0F /* UIKit.framework in Frameworks */,
+				CCB6A1B61855B345005DFD0F /* Foundation.framework in Frameworks */,
+				CCFBA4021C2001840093FA19 /* libGDTMobSDK.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CCB6A1A91855B345005DFD0F = {
+			isa = PBXGroup;
+			children = (
+				CCB6A1BB1855B345005DFD0F /* GDTMobSample */,
+				CCB6A1B41855B345005DFD0F /* Frameworks */,
+				CCB6A1B31855B345005DFD0F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CCB6A1B31855B345005DFD0F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CCB6A1B21855B345005DFD0F /* GDTMobSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CCB6A1B41855B345005DFD0F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCDB246D19AC340500D17B6F /* StoreKit.framework */,
+				CCB3BC3C18695372007C3070 /* Security.framework */,
+				CCB6A24C1855C9F9005DFD0F /* libz.dylib */,
+				CCB6A24A1855C9F2005DFD0F /* CoreTelephony.framework */,
+				CCB6A2481855C9EA005DFD0F /* SystemConfiguration.framework */,
+				CCB6A2461855C9E3005DFD0F /* QuartzCore.framework */,
+				CCB6A2441855C9DC005DFD0F /* CoreLocation.framework */,
+				CCB6A2421855C99B005DFD0F /* AdSupport.framework */,
+				CCB6A1B51855B345005DFD0F /* Foundation.framework */,
+				CCB6A1B71855B345005DFD0F /* CoreGraphics.framework */,
+				CCB6A1B91855B345005DFD0F /* UIKit.framework */,
+				CCB6A1CE1855B345005DFD0F /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCB6A1BB1855B345005DFD0F /* GDTMobSample */ = {
+			isa = PBXGroup;
+			children = (
+				CCB6A23A1855C1AC005DFD0F /* ViewController.xib */,
+				CCB6A23B1855C1AC005DFD0F /* ViewController.h */,
+				CCB6A23C1855C1AC005DFD0F /* ViewController.m */,
+				CCB6A22A1855C138005DFD0F /* GDTAdTypes */,
+				CCB6A1C41855B345005DFD0F /* GDTMobAppDelegate.h */,
+				CCB6A1C51855B345005DFD0F /* GDTMobAppDelegate.m */,
+				8E2860981E125FE300EEC3BC /* SplashBottomLogo.jpg */,
+				CCB6A1C71855B345005DFD0F /* Images.xcassets */,
+				CCB6A1BC1855B345005DFD0F /* Supporting Files */,
+			);
+			path = GDTMobSample;
+			sourceTree = "<group>";
+		};
+		CCB6A1BC1855B345005DFD0F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CCC5C1E21C61B9340081F04A /* GDTMobBannerView.h */,
+				CCC5C1E31C61B9340081F04A /* GDTMobInterstitial.h */,
+				CCC5C1E41C61B9340081F04A /* GDTNativeAd.h */,
+				CCC5C1E51C61B9340081F04A /* GDTSplashAd.h */,
+				CCC5C1E61C61B9340081F04A /* GDTTrack.h */,
+				CCFBA4011C2001840093FA19 /* libGDTMobSDK.a */,
+				CCB6A1BD1855B345005DFD0F /* GDTMobSample-Info.plist */,
+				CCB6A1BE1855B345005DFD0F /* InfoPlist.strings */,
+				CCB6A1C11855B345005DFD0F /* main.m */,
+				CCB6A1C31855B345005DFD0F /* GDTMobSample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CCB6A22A1855C138005DFD0F /* GDTAdTypes */ = {
+			isa = PBXGroup;
+			children = (
+				45F416301DCAE99E0010AA0D /* GDTStoryboard.storyboard */,
+				45F416311DCAE99E0010AA0D /* SplashViewController.h */,
+				45F416321DCAE99E0010AA0D /* SplashViewController.m */,
+				CCB21002188D19B5008C3EB5 /* InterstitialViewController.h */,
+				CCB21003188D19B5008C3EB5 /* InterstitialViewController.m */,
+				CCB6A2361855C193005DFD0F /* BannerViewController.h */,
+				CCB6A2371855C193005DFD0F /* BannerViewController.m */,
+				CCA347881A1C7D0700AF55B3 /* NativeViewController.h */,
+				CCA347891A1C7D0700AF55B3 /* NativeViewController.m */,
+			);
+			name = GDTAdTypes;
+			path = ../GDTAdTypes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CCB6A1B11855B345005DFD0F /* GDTMobSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCB6A1DE1855B345005DFD0F /* Build configuration list for PBXNativeTarget "GDTMobSample" */;
+			buildPhases = (
+				CCB6A1AE1855B345005DFD0F /* Sources */,
+				CCB6A1AF1855B345005DFD0F /* Frameworks */,
+				CCB6A1B01855B345005DFD0F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GDTMobSample;
+			productName = GDTMobSample;
+			productReference = CCB6A1B21855B345005DFD0F /* GDTMobSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CCB6A1AA1855B345005DFD0F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = GDTMob;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Tencent;
+				TargetAttributes = {
+					CCB6A1B11855B345005DFD0F = {
+						DevelopmentTeam = LPC62HC3A3;
+					};
+				};
+			};
+			buildConfigurationList = CCB6A1AD1855B345005DFD0F /* Build configuration list for PBXProject "GDTMobSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CCB6A1A91855B345005DFD0F;
+			productRefGroup = CCB6A1B31855B345005DFD0F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CCB6A1B11855B345005DFD0F /* GDTMobSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CCB6A1B01855B345005DFD0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCB6A23D1855C1AC005DFD0F /* ViewController.xib in Resources */,
+				CCB6A1C01855B345005DFD0F /* InfoPlist.strings in Resources */,
+				CCB6A1C81855B345005DFD0F /* Images.xcassets in Resources */,
+				8E2860991E125FE300EEC3BC /* SplashBottomLogo.jpg in Resources */,
+				45F416351DCAE99E0010AA0D /* GDTStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CCB6A1AE1855B345005DFD0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCB6A1C21855B345005DFD0F /* main.m in Sources */,
+				CCB6A1C61855B345005DFD0F /* GDTMobAppDelegate.m in Sources */,
+				45F416361DCAE99E0010AA0D /* SplashViewController.m in Sources */,
+				CCB21005188D19B5008C3EB5 /* InterstitialViewController.m in Sources */,
+				CCB6A23E1855C1AC005DFD0F /* ViewController.m in Sources */,
+				CCB6A2391855C193005DFD0F /* BannerViewController.m in Sources */,
+				CCA3478B1A1C7D0700AF55B3 /* NativeViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CCB6A1BE1855B345005DFD0F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCB6A1BF1855B345005DFD0F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CCB6A1DC1855B345005DFD0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CCB6A1DD1855B345005DFD0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CCB6A1DF1855B345005DFD0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = LPC62HC3A3;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GDTMobSample/lib",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GDTMobSample/GDTMobSample-Prefix.pch";
+				INFOPLIST_FILE = "GDTMobSample/GDTMobSample-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/GDTMobSample/lib",
+					"$(PROJECT_DIR)/GDTMobSample/lib",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gdt.qq.GDTMobSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CCB6A1E01855B345005DFD0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = LPC62HC3A3;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GDTMobSample/lib",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GDTMobSample/GDTMobSample-Prefix.pch";
+				INFOPLIST_FILE = "GDTMobSample/GDTMobSample-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/GDTMobSample/lib",
+					"$(PROJECT_DIR)/GDTMobSample/lib",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gdt.qq.GDTMobSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CCB6A1AD1855B345005DFD0F /* Build configuration list for PBXProject "GDTMobSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCB6A1DC1855B345005DFD0F /* Debug */,
+				CCB6A1DD1855B345005DFD0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCB6A1DE1855B345005DFD0F /* Build configuration list for PBXNativeTarget "GDTMobSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCB6A1DF1855B345005DFD0F /* Debug */,
+				CCB6A1E01855B345005DFD0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CCB6A1AA1855B345005DFD0F /* Project object */;
+}
