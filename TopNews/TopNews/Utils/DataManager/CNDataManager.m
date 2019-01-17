@@ -28,7 +28,7 @@
         channel.englishName = defultChannel[i];
         channel.sortLoc = [NSNumber numberWithInteger:i];
         channel.ID = [NSString stringWithFormat:@"%d",i];
-        if(i <= 6)  // 默认设置6个频道
+        //if(i <= 6)  // 默认设置6个频道
         channel.channelState = @1;
         [channelArr addObject:channel];
     }

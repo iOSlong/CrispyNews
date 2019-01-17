@@ -172,7 +172,6 @@
 		8EAD323C1D82BCFB001ECC68 /* wahtsapp@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EAD31741D82BCFA001ECC68 /* wahtsapp@3x.png */; };
 		8EAD323D1D82BCFB001ECC68 /* ic_clock@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EAD31761D82BCFA001ECC68 /* ic_clock@1x.png */; };
 		8EAD323E1D82BCFB001ECC68 /* ic_clock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EAD31771D82BCFA001ECC68 /* ic_clock@2x.png */; };
-		8EAD323F1D82BCFB001ECC68 /* ic_clock@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EAD31781D82BCFA001ECC68 /* ic_clock@3x.png */; };
 		8EAD32431D82BCFB001ECC68 /* ic_delete@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EAD317C1D82BCFA001ECC68 /* ic_delete@1x.png */; };
 		8EAD32441D82BCFB001ECC68 /* ic_delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EAD317D1D82BCFA001ECC68 /* ic_delete@2x.png */; };
 		8EAD32451D82BCFB001ECC68 /* ic_delete@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EAD317E1D82BCFA001ECC68 /* ic_delete@3x.png */; };
@@ -182,7 +181,6 @@
 		8EAD32491D82BCFB001ECC68 /* headicon-comment-02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8EAD31851D82BCFA001ECC68 /* headicon-comment-02.jpg */; };
 		8EAD324A1D82BCFB001ECC68 /* ic_arrow_down@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EAD31861D82BCFA001ECC68 /* ic_arrow_down@3x.png */; };
 		8EAD324B1D82BCFB001ECC68 /* ic_arrow_up@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EAD31871D82BCFA001ECC68 /* ic_arrow_up@3x.png */; };
-		8EAD324C1D82BCFB001ECC68 /* ic_clock@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EAD31881D82BCFA001ECC68 /* ic_clock@3x.png */; };
 		8EAD324D1D82BCFB001ECC68 /* ic_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EAD31891D82BCFA001ECC68 /* ic_close@3x.png */; };
 		8EAD324E1D82BCFB001ECC68 /* img-article.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8EAD318A1D82BCFA001ECC68 /* img-article.jpg */; };
 		8EAD324F1D82BCFB001ECC68 /* img-recommend-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8EAD318B1D82BCFA001ECC68 /* img-recommend-01.jpg */; };
@@ -1670,7 +1668,6 @@
 				8EAD32201D82BCFB001ECC68 /* bar_head@2x.png in Resources */,
 				8EAD322E1D82BCFB001ECC68 /* ic_like@1x.png in Resources */,
 				8E303FCC1DE7EDD1003792B7 /* 2070x984-1@3x.png in Resources */,
-				8EAD323F1D82BCFB001ECC68 /* ic_clock@3x.png in Resources */,
 				8ED1AAE81D9938810060D17A /* load_w@2x.png in Resources */,
 				8EAECB5C1DB60C83005D6A1B /* btn_x@3x.png in Resources */,
 				8EAD321A1D82BCFB001ECC68 /* ic_redheart@2x.png in Resources */,
@@ -1689,7 +1686,6 @@
 				8EAD32151D82BCFB001ECC68 /* ic_gear@2x.png in Resources */,
 				8EAD32321D82BCFB001ECC68 /* ic_share@2x.png in Resources */,
 				8EAD324F1D82BCFB001ECC68 /* img-recommend-01.jpg in Resources */,
-				8EAD324C1D82BCFB001ECC68 /* ic_clock@3x.png in Resources */,
 				8E303FCD1DE7EDD1003792B7 /* 2070x984-2@3x.png in Resources */,
 				8ED5B81A1DC4773D0066F12C /* imgtest.html in Resources */,
 				8E303FCB1DE7EDD1003792B7 /* 1380x656-Click@2x.png in Resources */,

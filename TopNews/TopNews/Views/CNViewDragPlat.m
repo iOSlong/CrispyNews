@@ -230,7 +230,7 @@
             }
         }
     }else{
-        newH = van_y + [[self.itemArr lastObject] height] + span_up;
+        newH = van_y + [((CNDragItem *)[self.itemArr lastObject]) height] + span_up;
         if (self.height != newH) {
             self.height = newH;
             if (_EBlock) {

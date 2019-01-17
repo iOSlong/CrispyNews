@@ -137,28 +137,29 @@ static NSString * const reuseIdentifier = @"newsCellViewID";
 }
 
 - (void)showChannelSetView {
-//    CNChannelConfigureViewController *_configureVC = [[CNChannelConfigureViewController alloc] init];
-//    [self.navigationController pushViewController:_configureVC animated:YES];
-//
     
-    self.channelConfigurePlat.arrSortRefer = self.segmentView.arrItem;
-    [self.channelConfigurePlat show];
-
-    
-    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    [delegate.crispyMenu  setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeCustom];
-    
-//    [CNUtils reportWgt_WidgetId:@"testOne"];
-    
-#if 0
+#if 1
     
     // 提供数据参考，
     self.channelSetPlat.arrSortRefer = self.segmentView.arrItem;
     [self.channelSetPlat show];
     // 禁掉抽屉滑动出现功能。
-    AppDelegate *delegate = [UIApplication sharedApplication].delegate;
-    [delegate.crispyMenu  setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeCustom];
+#else
+        //    CNChannelConfigureViewController *_configureVC = [[CNChannelConfigureViewController alloc] init];
+        //    [self.navigationController pushViewController:_configureVC animated:YES];
+        //
+    
+    self.channelConfigurePlat.arrSortRefer = self.segmentView.arrItem;
+    [self.channelConfigurePlat show];
+    
+    
+        //    [CNUtils reportWgt_WidgetId:@"testOne"];
+
 #endif
+    
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [delegate.crispyMenu  setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeCustom];
+
 }
 
 
