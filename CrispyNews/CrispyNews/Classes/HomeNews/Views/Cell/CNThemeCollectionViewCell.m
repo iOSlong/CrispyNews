@@ -22,6 +22,7 @@
         [self addSubview:self.btnDel];
         self.btnDel.right   = self.width;
         self.btnDel.top     = 0;
+    
         self.backgroundColor= [UIColor lightGrayColor];
     }
     return self;
@@ -31,6 +32,7 @@
         _btnTitle = [UIButton buttonWithType:UIButtonTypeCustom];
         [_btnTitle addTarget:self action:@selector(btnTitleClick:) forControlEvents:UIControlEventTouchUpInside];
         [_btnTitle setFrame:self.bounds];
+        [_btnTitle.titleLabel setFont:[UIFont systemFontOfSize:17]];
     }
     return _btnTitle;
 }
@@ -147,6 +149,19 @@
 
 - (void)setThemeState:(CNThemeItemState)themeState {
     self.themeBtn.themeState = themeState;
+}
+
+
+- (UICollectionViewLayoutAttributes *)preferredLayoutAttributesFittingAttributes:(UICollectionViewLayoutAttributes *)layoutAttributes {
+    UICollectionViewLayoutAttributes *attributes = [super preferredLayoutAttributesFittingAttributes:layoutAttributes];
+    NSString *title = self.themeBtn.themeTitle;
+    CGRect rect = [title boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, 30) options:NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17]} context:nil];
+    
+    rect.size.width +=0;
+    rect.size.height+=0;
+
+    attributes.frame = rect;
+    return attributes;
 }
 
 @end

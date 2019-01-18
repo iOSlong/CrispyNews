@@ -69,17 +69,18 @@ static NSString *const footerId = @"footerId";
     
     //创建一个layout布局类
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-    //设置布局滚动方向为 Horizontal-水平滚动   Vertical-垂直滚动
-    //注意：如果是Vertical的则cell是水平布局排列，如果是Horizontal则cell是垂直布局排列 （这个就叫做流式布局）
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;
     
     layout.headerReferenceSize = CGSizeMake([UIScreen mainScreen].bounds.size.width, 35);//头部
     //设置每一个item的大小
-    layout.itemSize     = CGSizeMake(85, 38);
+//    layout.itemSize     = CGSizeMake(85, 38);
+    
     //设置分区的EdgeInset
     layout.sectionInset = UIEdgeInsetsMake(15, 15, 15, 15);
     
-    
+    layout.estimatedItemSize    = CGSizeMake(80, 38);
+    layout.minimumLineSpacing   = 10;
+    layout.minimumInteritemSpacing = 10;
     
     //创建一个collectionView，通过布局策略来创建
     self.collectionView    = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
@@ -200,12 +201,12 @@ static NSString *const footerId = @"footerId";
     return 0;
 }
 
-//设置每一个cell的大小
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    
-    return CGSizeMake(85, 38);
-    
-}
+////设置每一个cell的大小
+//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+//
+//    return CGSizeMake(85, 38);
+//
+//}
 
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
